@@ -1,84 +1,193 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Search, Menu, X, ChevronDown } from "lucide-react";
+import { Search, Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import Logo from "./Logo";
+import SearchModal from "./SearchModal";
 
 const topLinks = [
-  { label: "People@VDIT", to: "/about#people" },
-  { label: "Students", to: "/campus#students" },
-  { label: "Alumni", to: "/about#alumni" },
-  { label: "Recruitment", to: "/about#careers" },
-  { label: "Media Queries", to: "/about#media" },
-  { label: "NIRF", to: "/about#nirf" },
+  { label: "People@VDIT", to: "/about/people" },
+  { label: "Students", to: "/students" },
+  { label: "Alumni", to: "/alumni" },
+  { label: "Recruitment", to: "/about/recruitment" },
+  { label: "Media Queries", to: "/about/media" },
+  { label: "NIRF", to: "/about/nirf" },
 ];
 
+// Mega-menu structure: each top-level item has columns of links + optional 3rd-level children
 const mainNav = [
   {
     label: "ABOUT",
     to: "/about",
-    children: [
-      { label: "About KLS", to: "/about#kls" },
-      { label: "Our History", to: "/about#history" },
-      { label: "Vision & Mission", to: "/about#vision" },
-      { label: "Leadership", to: "/about#leadership" },
-      { label: "Our Campus", to: "/campus" },
+    columns: [
+      {
+        heading: "About VDIT",
+        links: [
+          { label: "About VDIT", to: "/about/about-vdit" },
+          { label: "Principal's Message", to: "/about/principals-message" },
+          { label: "Vision & Mission", to: "/about/vision-mission" },
+          { label: "Our History", to: "/about/our-history" },
+        ],
+      },
+      {
+        heading: "Governance",
+        links: [
+          { label: "Governing Bodies", to: "/about/governing-bodies" },
+          { label: "Committees & Chairs", to: "/about/committees" },
+          { label: "Rules & Regulations", to: "/about/rules" },
+          { label: "Right to Information", to: "/about/rti" },
+        ],
+      },
+      {
+        heading: "People @ VDIT",
+        links: [
+          { label: "Faculty", to: "/about/people?tab=faculty" },
+          { label: "Administrative Staff", to: "/about/people?tab=admin" },
+          { label: "Researchers", to: "/about/people?tab=research" },
+          { label: "Fellows", to: "/about/people?tab=fellows" },
+        ],
+      },
+      {
+        heading: "Quality & Disclosure",
+        links: [
+          { label: "IQAC", to: "/about/iqac" },
+          { label: "NAAC", to: "/about/naac" },
+          { label: "NIRF", to: "/about/nirf" },
+          { label: "Mandatory Disclosure", to: "/about/mandatory-disclosure" },
+          { label: "Financial Statements", to: "/about/financial-statements" },
+        ],
+      },
     ],
   },
   {
     label: "ACADEMICS",
     to: "/academics",
-    children: [
-      { label: "Undergraduate Programmes", to: "/academics#ug" },
-      { label: "Postgraduate Programmes", to: "/academics#pg" },
-      { label: "Departments", to: "/academics#departments" },
-      { label: "Academic Calendar", to: "/academics#calendar" },
+    columns: [
+      {
+        heading: "Programmes",
+        links: [
+          { label: "Undergraduate (B.E.)", to: "/academics#ug" },
+          { label: "Postgraduate (M.Tech)", to: "/academics#pg" },
+          { label: "Doctoral (Ph.D)", to: "/academics#phd" },
+          { label: "Continuing Education", to: "/academics#ce" },
+        ],
+      },
+      {
+        heading: "Departments",
+        links: [
+          { label: "Computer Science (CSE)", to: "/programme/cse" },
+          { label: "CSE (AI & ML)", to: "/programme/cse-aiml" },
+          { label: "Electronics (ECE)", to: "/programme/ece" },
+          { label: "Electrical (EEE)", to: "/programme/eee" },
+          { label: "Mechanical (ME)", to: "/programme/me" },
+          { label: "Civil", to: "/programme/civil" },
+        ],
+      },
+      {
+        heading: "Academic Resources",
+        links: [
+          { label: "Academic Calendar", to: "/academics#calendar" },
+          { label: "Time Tables", to: "/academics#timetables" },
+          { label: "Examination Cell", to: "/academics#exam" },
+          { label: "Syllabus & VTU", to: "/academics#syllabus" },
+        ],
+      },
     ],
   },
   {
     label: "ADMISSIONS",
     to: "/admissions",
-    children: [
-      { label: "How to Apply", to: "/admissions#apply" },
-      { label: "Eligibility", to: "/admissions#eligibility" },
-      { label: "Fee Structure", to: "/admissions#fees" },
-      { label: "Scholarships", to: "/admissions#scholarships" },
+    columns: [
+      {
+        heading: "Apply",
+        links: [
+          { label: "How to Apply", to: "/admissions#apply" },
+          { label: "Eligibility", to: "/admissions#eligibility" },
+          { label: "Important Dates", to: "/admissions#dates" },
+          { label: "Admission Enquiry", to: "/admissions#apply" },
+        ],
+      },
+      {
+        heading: "Fees & Aid",
+        links: [
+          { label: "Fee Structure", to: "/admissions#fees" },
+          { label: "Scholarships", to: "/admissions#scholarships" },
+          { label: "Hostel Fees", to: "/campus#hostels" },
+        ],
+      },
     ],
   },
   {
     label: "RESEARCH",
     to: "/research",
-    children: [
-      { label: "Research Areas", to: "/research#areas" },
-      { label: "Publications", to: "/research#publications" },
-      { label: "Centres", to: "/research#centres" },
+    columns: [
+      {
+        heading: "Research at VDIT",
+        links: [
+          { label: "Research Areas", to: "/research#areas" },
+          { label: "Research Centres", to: "/research#centres" },
+          { label: "Publications", to: "/research#publications" },
+          { label: "Funded Projects", to: "/research#projects" },
+        ],
+      },
+      {
+        heading: "Innovation",
+        links: [
+          { label: "IEDC", to: "/research#iedc" },
+          { label: "Industry-Institute Cell", to: "/research#i-i" },
+          { label: "Patents", to: "/research#patents" },
+        ],
+      },
     ],
   },
   {
     label: "CAMPUS",
     to: "/campus",
-    children: [
-      { label: "Library", to: "/campus#library" },
-      { label: "Hostels", to: "/campus#hostels" },
-      { label: "Facilities", to: "/campus#facilities" },
-      { label: "Sports", to: "/campus#sports" },
+    columns: [
+      {
+        heading: "Facilities",
+        links: [
+          { label: "Library", to: "/library" },
+          { label: "Hostels", to: "/campus#hostels" },
+          { label: "Cafeteria", to: "/campus#facilities" },
+          { label: "Wi-Fi & IT", to: "/campus#facilities" },
+          { label: "Transport", to: "/campus#facilities" },
+        ],
+      },
+      {
+        heading: "Student Life",
+        links: [
+          { label: "Sports", to: "/campus#sports" },
+          { label: "Cultural", to: "/campus#cultural" },
+          { label: "NSS", to: "/campus#nss" },
+          { label: "Clubs", to: "/campus#clubs" },
+        ],
+      },
+      {
+        heading: "Career",
+        links: [
+          { label: "Placements", to: "/placements" },
+          { label: "Recruiters", to: "/placements#recruiters" },
+          { label: "Training & Skill Dev.", to: "/placements#training" },
+        ],
+      },
     ],
   },
   {
     label: "NEWS & EVENTS",
     to: "/news-events",
-    children: null,
+    columns: null,
   },
   {
     label: "VDIT FORUM",
     to: "/forum",
-    children: null,
+    columns: null,
   },
 ];
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openMega, setOpenMega] = useState(null);
   const [openMobileMenu, setOpenMobileMenu] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -88,169 +197,231 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+  }, [mobileOpen]);
+
   return (
-    <header
-      className={`sticky top-0 z-50 bg-[#f7efe2] transition-shadow ${
-        scrolled ? "shadow-md" : ""
-      }`}
-    >
-      {/* Top utility bar */}
-      <div className="hidden md:flex justify-end items-center gap-5 px-6 lg:px-10 pt-3 text-[12.5px] font-sans-ui">
-        {topLinks.map((l) => (
-          <Link
-            key={l.label}
-            to={l.to}
-            className="text-[#7a1d2c] hover:text-[#5b1421] transition-colors"
-          >
-            {l.label}
-          </Link>
-        ))}
-        <button
-          onClick={() => setSearchOpen(!searchOpen)}
-          className="flex items-center gap-1 border border-[#7a1d2c]/30 px-3 py-1 rounded text-[#7a1d2c] hover:bg-[#7a1d2c] hover:text-[#f7efe2] transition-colors"
-          aria-label="Toggle search"
-        >
-          <Search size={14} />
-          <span>Search</span>
-        </button>
-      </div>
-
-      {/* Search bar */}
-      {searchOpen && (
-        <div className="px-6 lg:px-10 mt-2">
-          <input
-            type="text"
-            placeholder="Search VDIT..."
-            autoFocus
-            className="w-full md:max-w-md ml-auto block px-4 py-2 border border-[#7a1d2c]/40 rounded text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#7a1d2c]/40"
-          />
-        </div>
-      )}
-
-      {/* Main nav row */}
-      <div className="flex items-center justify-between px-4 md:px-6 lg:px-10 py-3">
-        <Link to="/" className="flex items-center gap-3">
-          <Logo size={54} />
-          <div className="leading-tight">
-            <div className="text-[#7a1d2c] font-bold text-2xl md:text-3xl tracking-wide" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              KLS VDIT
-            </div>
-            <div className="text-[#3a3a3a] text-[11px] md:text-xs font-sans-ui leading-tight max-w-[280px]">
-              Vishwanathrao Deshpande Institute of Technology, Haliyal
-            </div>
-          </div>
-        </Link>
-
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-7 font-sans-ui text-[13.5px] font-semibold tracking-wider">
-          {mainNav.map((item) => (
-            <div
-              key={item.label}
-              className="relative"
-              onMouseEnter={() => setOpenDropdown(item.label)}
-              onMouseLeave={() => setOpenDropdown(null)}
+    <>
+      <header
+        className={`sticky top-0 z-50 bg-[#f7efe2] transition-shadow ${
+          scrolled ? "shadow-md" : ""
+        }`}
+      >
+        {/* Top utility bar */}
+        <div className="hidden md:flex justify-end items-center gap-5 px-6 lg:px-10 pt-3 text-[12.5px] font-sans-ui">
+          {topLinks.map((l) => (
+            <Link
+              key={l.label}
+              to={l.to}
+              className="text-[#7a1d2c] hover:text-[#5b1421] transition-colors"
             >
-              <NavLink
-                to={item.to}
-                className={({ isActive }) =>
-                  `nav-link text-[#2a2a2a] hover:text-[#7a1d2c] flex items-center gap-1 ${
-                    isActive ? "text-[#7a1d2c]" : ""
-                  }`
-                }
-              >
-                {item.label}
-                {item.children && <ChevronDown size={13} />}
-              </NavLink>
-              {item.children && openDropdown === item.label && (
-                <div className="absolute left-0 top-full pt-3 w-64 z-50">
-                  <div className="bg-white shadow-xl rounded border border-[#7a1d2c]/15 overflow-hidden">
-                    {item.children.map((c) => (
-                      <Link
-                        key={c.label}
-                        to={c.to}
-                        className="block px-4 py-3 text-[13px] text-[#2a2a2a] hover:bg-[#7a1d2c] hover:text-[#f7efe2] transition-colors"
-                      >
-                        {c.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+              {l.label}
+            </Link>
           ))}
-        </nav>
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="flex items-center gap-1 border border-[#7a1d2c]/30 px-3 py-1 rounded text-[#7a1d2c] hover:bg-[#7a1d2c] hover:text-[#f7efe2] transition-colors"
+            aria-label="Open search"
+          >
+            <Search size={14} />
+            <span>Search</span>
+          </button>
+        </div>
 
-        {/* Mobile button */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 text-[#7a1d2c]"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
+        {/* Main nav row */}
+        <div className="flex items-center justify-between px-4 md:px-6 lg:px-10 py-3">
+          <Link to="/" className="flex items-center gap-3">
+            <Logo size={54} />
+            <div className="leading-tight">
+              <div
+                className="text-[#7a1d2c] font-bold text-2xl md:text-3xl tracking-wide"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                KLS VDIT
+              </div>
+              <div className="text-[#3a3a3a] text-[11px] md:text-xs font-sans-ui leading-tight max-w-[280px]">
+                Vishwanathrao Deshpande Institute of Technology, Haliyal
+              </div>
+            </div>
+          </Link>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-[#f7efe2] border-t border-[#7a1d2c]/20 max-h-[80vh] overflow-y-auto">
-          <div className="px-4 py-4 space-y-1 font-sans-ui">
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center gap-7 font-sans-ui text-[13.5px] font-semibold tracking-wider">
             {mainNav.map((item) => (
-              <div key={item.label} className="border-b border-[#7a1d2c]/10">
-                <button
-                  onClick={() =>
-                    setOpenMobileMenu(
-                      openMobileMenu === item.label ? null : item.label
-                    )
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => setOpenMega(item.label)}
+                onMouseLeave={() => setOpenMega(null)}
+              >
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    `nav-link text-[#2a2a2a] hover:text-[#7a1d2c] flex items-center gap-1 ${
+                      isActive ? "text-[#7a1d2c]" : ""
+                    }`
                   }
-                  className="w-full flex items-center justify-between py-3 text-[#2a2a2a] font-semibold text-sm tracking-wider"
                 >
-                  <Link
-                    to={item.to}
-                    onClick={() => !item.children && setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <ChevronDown
-                      size={16}
-                      className={`transition-transform ${
-                        openMobileMenu === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
-                </button>
-                {item.children && openMobileMenu === item.label && (
-                  <div className="pl-4 pb-3 space-y-2">
-                    {item.children.map((c) => (
-                      <Link
-                        key={c.label}
-                        to={c.to}
-                        onClick={() => setMobileOpen(false)}
-                        className="block py-1.5 text-[13px] text-[#2a2a2a]/80 hover:text-[#7a1d2c]"
-                      >
-                        {c.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                  {item.label}
+                  {item.columns && <ChevronDown size={13} />}
+                </NavLink>
               </div>
             ))}
-            <div className="pt-3 flex flex-col gap-2 text-xs">
-              {topLinks.map((l) => (
-                <Link
-                  key={l.label}
-                  to={l.to}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-[#7a1d2c] py-1"
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="lg:hidden text-[#7a1d2c] p-2"
+              aria-label="Search"
+            >
+              <Search size={18} />
+            </button>
+          </nav>
+
+          {/* Mobile actions */}
+          <div className="lg:hidden flex items-center gap-1">
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="p-2 text-[#7a1d2c]"
+              aria-label="Search"
+            >
+              <Search size={22} />
+            </button>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 text-[#7a1d2c]"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
         </div>
-      )}
-    </header>
+
+        {/* Mega menu panel (desktop) */}
+        {openMega && (
+          <div
+            onMouseEnter={() => setOpenMega(openMega)}
+            onMouseLeave={() => setOpenMega(null)}
+            className="hidden lg:block absolute left-0 right-0 top-full bg-[#f7efe2] border-t border-[#7a1d2c]/15 shadow-xl mega-anim z-40"
+          >
+            {(() => {
+              const item = mainNav.find((i) => i.label === openMega);
+              if (!item || !item.columns) return null;
+              return (
+                <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-6">
+                  {item.columns.map((col) => (
+                    <div key={col.heading}>
+                      <h4 className="text-[11px] tracking-[0.18em] text-[#7a1d2c] font-sans-ui font-semibold mb-3 uppercase">
+                        {col.heading}
+                      </h4>
+                      <ul className="space-y-2">
+                        {col.links.map((l) => (
+                          <li key={l.to}>
+                            <Link
+                              to={l.to}
+                              onClick={() => setOpenMega(null)}
+                              className="text-[13.5px] text-[#2a2a2a] hover:text-[#7a1d2c] transition flex items-center gap-1.5"
+                            >
+                              <ChevronRight
+                                size={12}
+                                className="text-[#7a1d2c]/0 group-hover:text-[#7a1d2c]"
+                              />
+                              {l.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              );
+            })()}
+          </div>
+        )}
+
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <div className="lg:hidden bg-[#f7efe2] border-t border-[#7a1d2c]/20 max-h-[80vh] overflow-y-auto">
+            <div className="px-4 py-4 space-y-1 font-sans-ui">
+              {mainNav.map((item) => (
+                <div
+                  key={item.label}
+                  className="border-b border-[#7a1d2c]/10"
+                >
+                  <button
+                    onClick={() => {
+                      if (item.columns) {
+                        setOpenMobileMenu(
+                          openMobileMenu === item.label ? null : item.label
+                        );
+                      } else {
+                        setMobileOpen(false);
+                      }
+                    }}
+                    className="w-full flex items-center justify-between py-3 text-[#2a2a2a] font-semibold text-sm tracking-wider"
+                  >
+                    <Link
+                      to={item.to}
+                      onClick={(e) => {
+                        if (item.columns) e.preventDefault();
+                        else setMobileOpen(false);
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                    {item.columns && (
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform ${
+                          openMobileMenu === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
+                  </button>
+                  {item.columns && openMobileMenu === item.label && (
+                    <div className="pl-4 pb-3 space-y-3">
+                      {item.columns.map((col) => (
+                        <div key={col.heading}>
+                          <p className="text-[10.5px] uppercase text-[#7a1d2c] font-semibold tracking-widest mb-1.5 mt-2">
+                            {col.heading}
+                          </p>
+                          <ul className="space-y-1.5">
+                            {col.links.map((l) => (
+                              <li key={l.to}>
+                                <Link
+                                  to={l.to}
+                                  onClick={() => setMobileOpen(false)}
+                                  className="block py-1 text-[13px] text-[#2a2a2a]/85 hover:text-[#7a1d2c]"
+                                >
+                                  {l.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              <div className="pt-3 flex flex-col gap-2 text-xs">
+                {topLinks.map((l) => (
+                  <Link
+                    key={l.label}
+                    to={l.to}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-[#7a1d2c] py-1"
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </header>
+
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+    </>
   );
 };
 

@@ -171,3 +171,64 @@ code {
         rgba(0, 0, 0, 0) 100%
     );
 }
+
+/* Marquee */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-track {
+    animation: marquee 60s linear infinite;
+    width: max-content;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+/* Mega menu animation */
+@keyframes megaIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.mega-anim {
+    animation: megaIn 0.18s ease-out;
+}
+
+/* Prose styles for content pages */
+.vdit-prose p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+    color: #2a2a2a;
+    font-size: 15.5px;
+}
+.vdit-prose strong {
+    color: #5b1421;
+}
+.vdit-prose ul,
+.vdit-prose ol {
+    margin: 0.75rem 0 1.25rem 1.25rem;
+    line-height: 1.75;
+}
+.vdit-prose ul li {
+    list-style: disc;
+}
+.vdit-prose ol li {
+    list-style: decimal;
+}
+.vdit-prose h3 {
+    color: hsl(var(--nls-maroon));
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1.5rem;
+}
