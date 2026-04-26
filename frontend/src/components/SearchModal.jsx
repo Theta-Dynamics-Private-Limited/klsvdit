@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search, X } from "lucide-react";
-import { newsItems, departments, events } from "../data/mock";
+import { newsItems, departments, events, faculty, studentClubs } from "../data/mock";
 
 const pages = [
   { title: "About VDIT", path: "/about/about-vdit", desc: "Overview of KLS VDIT, mission, history" },
@@ -52,11 +52,26 @@ const SearchModal = ({ open, onClose }) => {
       .map((d) => ({ title: d.name, path: `/programme/${d.id}`, desc: d.research }));
     const newsHits = newsItems
       .filter((n) => n.title.toLowerCase().includes(Q) || n.description.toLowerCase().includes(Q))
-      .map((n) => ({ title: n.title, path: `/news-events`, desc: n.date }));
+      .map((n) => ({ title: n.title, path: `/news/${n.id}`, desc: n.date }));
     const evHits = events
       .filter((e) => e.title.toLowerCase().includes(Q))
-      .map((e) => ({ title: e.title, path: `/news-events`, desc: e.date }));
-    return { pageHits, deptHits, newsHits, evHits };
+      .map((e) => ({ title: e.title, path: `/event/${e.id}`, desc: e.date }));
+    const facHits = faculty
+      .filter(
+        (f) =>
+          f.name.toLowerCase().includes(Q) ||
+          (f.areas || []).join(" ").toLowerCase().includes(Q) ||
+          (f.role || "").toLowerCase().includes(Q)
+      )
+      .map((f) => ({ title: f.name, path: `/faculty/${f.id}`, desc: `${f.role}` }));
+    const clubHits = studentClubs
+      .filter(
+        (c) =>
+          c.name.toLowerCase().includes(Q) ||
+          c.description.toLowerCase().includes(Q)
+      )
+      .map((c) => ({ title: c.name, path: `/student-clubs`, desc: c.category }));
+    return { pageHits, deptHits, newsHits, evHits, facHits, clubHits };
   }, [q]);
 
   if (!open) return null;
@@ -116,8 +131,10 @@ const SearchModal = ({ open, onClose }) => {
               {[
                 ["Pages", results.pageHits],
                 ["Programmes", results.deptHits],
+                ["Faculty", results.facHits],
                 ["News", results.newsHits],
                 ["Events", results.evHits],
+                ["Clubs", results.clubHits],
               ].map(([label, list]) =>
                 list.length ? (
                   <div key={label} className="mb-2">
@@ -141,10 +158,12 @@ const SearchModal = ({ open, onClose }) => {
               )}
               {!results.pageHits.length &&
                 !results.deptHits.length &&
+                !results.facHits.length &&
                 !results.newsHits.length &&
-                !results.evHits.length && (
+                !results.evHits.length &&
+                !results.clubHits.length && (
                   <div className="p-8 text-center text-sm text-[#3a3a3a]/70">
-                    No matches for “{q}”
+                    No matches for "{q}"
                   </div>
                 )}
             </div>

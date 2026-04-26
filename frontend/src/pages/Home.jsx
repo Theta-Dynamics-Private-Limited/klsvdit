@@ -32,10 +32,11 @@ const Home = () => {
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <SectionTitle>News</SectionTitle>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {newsItems.map((item) => (
-            <article
+          {newsItems.slice(0, 6).map((item) => (
+            <Link
+              to={`/news/${item.id}`}
               key={item.id}
-              className="bg-white card-hover overflow-hidden border border-[#7a1d2c]/10"
+              className="bg-white card-hover overflow-hidden border border-[#7a1d2c]/10 block"
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
@@ -52,11 +53,14 @@ const Home = () => {
                 <h3 className="text-[#7a1d2c] text-xl mt-2 font-semibold leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-[#3a3a3a]/85 text-sm mt-3 leading-relaxed">
+                <p className="text-[#3a3a3a]/85 text-sm mt-3 leading-relaxed line-clamp-3">
                   {item.description}
                 </p>
+                <span className="text-xs text-[#7a1d2c] underline mt-3 inline-block">
+                  Read more →
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
         <div className="mt-10 text-center">
@@ -75,9 +79,10 @@ const Home = () => {
           <SectionTitle>Events</SectionTitle>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {events.map((ev) => (
-              <div
+              <Link
+                to={`/event/${ev.id}`}
                 key={ev.id}
-                className="border-l-4 border-[#7a1d2c] bg-white p-5 card-hover"
+                className="border-l-4 border-[#7a1d2c] bg-white p-5 card-hover block"
               >
                 <div className="flex items-center gap-2 text-[#7a1d2c] text-xs font-sans-ui tracking-wider mb-2">
                   <Calendar size={14} />
@@ -86,7 +91,7 @@ const Home = () => {
                 <h3 className="text-[#2a2a2a] text-lg font-semibold leading-snug">
                   {ev.title}
                 </h3>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="mt-10 text-center">

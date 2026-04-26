@@ -37,6 +37,12 @@ import Placements from "./pages/Placements";
 import Library from "./pages/Library";
 import Alumni from "./pages/Alumni";
 import Students from "./pages/Students";
+import FacultyProfile from "./pages/FacultyProfile";
+import NewsDetail from "./pages/NewsDetail";
+import EventDetail from "./pages/EventDetail";
+import Announcements from "./pages/Announcements";
+import AnnouncementDetail from "./pages/AnnouncementDetail";
+import StudentClubs from "./pages/StudentClubs";
 
 const Forum = () => (
   <main className="max-w-5xl mx-auto px-6 lg:px-10 py-24 min-h-[60vh]">
@@ -93,6 +99,12 @@ function App() {
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/students" element={<Students />} />
           <Route path="/forum" element={<Forum />} />
+          <Route path="/faculty/:id" element={<FacultyProfile />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="/event/:id" element={<EventDetail />} />
+          <Route path="/announcements" element={<Announcements />} />
+          <Route path="/announcement/:id" element={<AnnouncementDetail />} />
+          <Route path="/student-clubs" element={<StudentClubs />} />
           <Route path="*" element={<Home />} />
         </Routes>
         <Footer />

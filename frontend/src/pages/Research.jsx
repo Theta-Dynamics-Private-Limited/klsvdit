@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { PageHero } from "./About";
 import { newsItems } from "../data/mock";
 
@@ -35,7 +36,7 @@ const Research = () => {
           <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recent Publications &amp; Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {newsItems.slice(0, 3).map((n) => (
-              <article key={n.id} className="bg-white card-hover overflow-hidden border border-[#7a1d2c]/10">
+              <Link to={`/news/${n.id}`} key={n.id} className="bg-white card-hover overflow-hidden border border-[#7a1d2c]/10 block">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img src={n.image} alt={n.title} loading="lazy" className="w-full h-full object-cover" />
                 </div>
@@ -43,7 +44,7 @@ const Research = () => {
                   <span className="text-xs text-[#7a1d2c] font-sans-ui">{n.date}</span>
                   <h3 className="text-[#7a1d2c] text-lg font-semibold mt-1 leading-snug">{n.title}</h3>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

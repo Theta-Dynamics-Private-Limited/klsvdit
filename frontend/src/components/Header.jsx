@@ -5,11 +5,11 @@ import Logo from "./Logo";
 import SearchModal from "./SearchModal";
 
 const topLinks = [
+  { label: "Announcements", to: "/announcements" },
   { label: "People@VDIT", to: "/about/people" },
   { label: "Students", to: "/students" },
   { label: "Alumni", to: "/alumni" },
   { label: "Recruitment", to: "/about/recruitment" },
-  { label: "Media Queries", to: "/about/media" },
   { label: "NIRF", to: "/about/nirf" },
 ];
 
@@ -159,7 +159,7 @@ const mainNav = [
           { label: "Sports", to: "/campus#sports" },
           { label: "Cultural", to: "/campus#cultural" },
           { label: "NSS", to: "/campus#nss" },
-          { label: "Clubs", to: "/campus#clubs" },
+          { label: "Student Clubs", to: "/student-clubs" },
         ],
       },
       {
