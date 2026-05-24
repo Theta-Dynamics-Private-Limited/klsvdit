@@ -20,7 +20,7 @@ const Academics = () => {
         </div>
       </section>
 
-      <section id="departments" className="bg-[#f1e6d2]/60 py-16">
+      <section id="departments" className="bg-surface-alt/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="text-3xl md:text-4xl text-brand mb-10 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Departments

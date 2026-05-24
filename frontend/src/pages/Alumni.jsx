@@ -44,7 +44,7 @@ const Alumni = () => (
       </div>
     </section>
 
-    <section className="bg-[#f1e6d2]/60 py-14 text-center">
+    <section className="bg-surface-alt/60 py-14 text-center">
       <div className="max-w-3xl mx-auto px-6 lg:px-10">
         <h2 className="text-3xl md:text-4xl text-brand font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Join the VDIT Alumni Network</h2>
         <p className="text-[#2a2a2a]/85 leading-relaxed">
@@ -52,7 +52,7 @@ const Alumni = () => (
           alumni meets, and contribute to your alma mater. Registration is open
           for all VDIT graduates.
         </p>
-        <Link to="/admissions" className="inline-block mt-6 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition">
+        <Link to="/admissions" className="inline-block mt-6 bg-brand text-surface px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition">
           Register on Alumni Portal
         </Link>
       </div>

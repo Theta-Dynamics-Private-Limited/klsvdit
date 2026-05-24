@@ -43,7 +43,7 @@ const IQAC = () => (
     <h3 className="text-2xl text-brand font-semibold mt-10 mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>IQAC Composition</h3>
     <div className="bg-white border border-brand/15">
       <table className="w-full text-sm">
-        <thead className="bg-brand text-[#f7efe2]">
+        <thead className="bg-brand text-surface">
           <tr><th className="text-left p-3">Member</th><th className="text-left p-3">Designation</th></tr>
         </thead>
         <tbody>
@@ -57,7 +57,7 @@ const IQAC = () => (
             ["Alumni Representative", "VDIT Alumni Network"],
             ["Student Representative", "VDIT Student Council"],
           ].map(([n, r], i) => (
-            <tr key={n + i} className="odd:bg-[#f7efe2]/40">
+            <tr key={n + i} className="odd:bg-surface/40">
               <td className="p-3 border-t border-brand/10">{n}</td>
               <td className="p-3 border-t border-brand/10 italic">{r}</td>
             </tr>

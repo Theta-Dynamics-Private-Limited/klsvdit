@@ -9,7 +9,7 @@ const PrincipalsMessage = () => (
   >
     <div className="flex flex-col md:flex-row gap-8 items-start">
       <div className="md:w-64 flex-shrink-0">
-        <div className="aspect-[3/4] overflow-hidden bg-[#f7efe2]">
+        <div className="aspect-[3/4] overflow-hidden bg-surface">
           <img
             src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&q=80"
             alt="Dr. V. A. Kulkarni"

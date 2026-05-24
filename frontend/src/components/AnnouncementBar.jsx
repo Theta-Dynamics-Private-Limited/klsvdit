@@ -6,11 +6,11 @@ import { announcements } from "../data/mock";
 const AnnouncementBar = () => {
   const items = [...announcements, ...announcements];
   return (
-    <div className="bg-brand-dark text-[#f7efe2] overflow-hidden">
+    <div className="bg-brand-dark text-surface overflow-hidden">
       <div className="flex items-center max-w-[1900px] mx-auto">
         <Link
           to="/announcements"
-          className="flex items-center gap-2 px-4 py-2 bg-brand text-[#f7efe2] flex-shrink-0 font-sans-ui text-xs uppercase tracking-widest hover:bg-brand-darker transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-brand text-surface flex-shrink-0 font-sans-ui text-xs uppercase tracking-widest hover:bg-brand-darker transition-colors"
         >
           <Megaphone size={14} />
           <span className="hidden sm:inline">Announcements</span>
@@ -23,7 +23,7 @@ const AnnouncementBar = () => {
                 key={`${m.id}-${i}`}
                 className="text-[13px] font-sans-ui flex items-center gap-3 hover:text-white hover:underline cursor-pointer"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f7efe2]/70" />
+                <span className="w-1.5 h-1.5 rounded-full bg-surface/70" />
                 {m.text}
               </Link>
             ))}

@@ -57,6 +57,10 @@ module.exports = {
   				DEFAULT: 'rgb(var(--brand) / <alpha-value>)',
   				dark: 'rgb(var(--brand-dark) / <alpha-value>)',
   				darker: 'rgb(var(--brand-darker) / <alpha-value>)'
+  			},
+  			surface: {
+  				DEFAULT: 'rgb(var(--surface) / <alpha-value>)',
+  				alt: 'rgb(var(--surface-alt) / <alpha-value>)'
   			}
   		},
   		keyframes: {

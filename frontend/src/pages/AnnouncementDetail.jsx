@@ -42,7 +42,7 @@ const AnnouncementDetail = () => {
           Principal.
         </p>
       </section>
-      <section className="bg-[#f1e6d2]/60 py-14">
+      <section className="bg-surface-alt/60 py-14">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h3 className="text-2xl text-brand font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Other Announcements</h3>
           <ul className="space-y-2">

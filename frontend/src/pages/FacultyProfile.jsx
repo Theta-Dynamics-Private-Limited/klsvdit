@@ -35,7 +35,7 @@ const FacultyProfile = () => {
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-12">
         <div className="grid lg:grid-cols-3 gap-10">
           <aside className="space-y-5">
-            <div className="aspect-[3/4] overflow-hidden bg-[#f1e6d2]">
+            <div className="aspect-[3/4] overflow-hidden bg-surface-alt">
               <img src={f.image} alt={f.name} className="w-full h-full object-cover" />
             </div>
             <div className="bg-white border border-brand/15 p-5 space-y-3 text-sm">
@@ -53,7 +53,7 @@ const FacultyProfile = () => {
                 <p className="flex items-center gap-2"><Phone size={14} className="text-brand" /> {f.phone}</p>
               </div>
             </div>
-            <div className="bg-[#f1e6d2]/60 p-5 border border-brand/15">
+            <div className="bg-surface-alt/60 p-5 border border-brand/15">
               <p className="text-xs uppercase tracking-widest text-brand font-semibold font-sans-ui mb-3">At a glance</p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center gap-2"><GraduationCap size={14} className="text-brand" /> {f.qualifications}</div>

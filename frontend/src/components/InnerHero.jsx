@@ -10,7 +10,7 @@ const InnerHero = ({ title, image, breadcrumbs = [] }) => {
         <div className="absolute inset-0 flex items-end pb-6">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
             <h1
-              className="text-[#f7efe2] text-3xl md:text-5xl font-semibold"
+              className="text-surface text-3xl md:text-5xl font-semibold"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {title}
@@ -18,7 +18,7 @@ const InnerHero = ({ title, image, breadcrumbs = [] }) => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f1e6d2] border-b border-brand/15">
+      <div className="bg-surface-alt border-b border-brand/15">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-3">
           <Breadcrumbs trail={breadcrumbs} />
         </div>

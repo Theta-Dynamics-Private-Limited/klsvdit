@@ -26,7 +26,7 @@ const Library = () => (
       </div>
     </section>
 
-    <section className="bg-[#f1e6d2]/60 py-14">
+    <section className="bg-surface-alt/60 py-14">
       <div className="max-w-5xl mx-auto px-6 lg:px-10 vdit-prose">
         <h2 className="text-3xl text-brand font-semibold mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>About the Library</h2>
         <p>

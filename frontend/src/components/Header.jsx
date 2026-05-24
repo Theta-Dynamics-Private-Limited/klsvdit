@@ -205,7 +205,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-[#f7efe2] transition-shadow ${
+        className={`sticky top-0 z-50 bg-surface transition-shadow ${
           scrolled ? "shadow-md" : ""
         }`}
       >
@@ -222,7 +222,7 @@ const Header = () => {
           ))}
           <button
             onClick={() => setSearchOpen(true)}
-            className="flex items-center gap-1 border border-brand/30 px-3 py-1 rounded text-brand hover:bg-brand hover:text-[#f7efe2] transition-colors"
+            className="flex items-center gap-1 border border-brand/30 px-3 py-1 rounded text-brand hover:bg-brand hover:text-surface transition-colors"
             aria-label="Open search"
           >
             <Search size={14} />
@@ -303,7 +303,7 @@ const Header = () => {
           <div
             onMouseEnter={() => setOpenMega(openMega)}
             onMouseLeave={() => setOpenMega(null)}
-            className="hidden lg:block absolute left-0 right-0 top-full bg-[#f7efe2] border-t border-brand/15 shadow-xl mega-anim z-40"
+            className="hidden lg:block absolute left-0 right-0 top-full bg-surface border-t border-brand/15 shadow-xl mega-anim z-40"
           >
             {(() => {
               const item = mainNav.find((i) => i.label === openMega);
@@ -342,7 +342,7 @@ const Header = () => {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-[#f7efe2] border-t border-brand/20 max-h-[80vh] overflow-y-auto">
+          <div className="lg:hidden bg-surface border-t border-brand/20 max-h-[80vh] overflow-y-auto">
             <div className="px-4 py-4 space-y-1 font-sans-ui">
               {mainNav.map((item) => (
                 <div

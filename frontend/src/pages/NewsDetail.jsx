@@ -43,7 +43,7 @@ const NewsDetail = () => {
         <p className="text-[#2a2a2a]/90 leading-relaxed text-[16px]">{n.body}</p>
       </section>
 
-      <section className="bg-[#f1e6d2]/60 py-14">
+      <section className="bg-surface-alt/60 py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h3 className="text-2xl text-brand font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>More News</h3>
           <div className="grid md:grid-cols-3 gap-6">

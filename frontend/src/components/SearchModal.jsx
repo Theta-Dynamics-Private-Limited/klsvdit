@@ -88,7 +88,7 @@ const SearchModal = ({ open, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#f7efe2] w-full max-w-2xl shadow-2xl border border-brand/15"
+        className="bg-surface w-full max-w-2xl shadow-2xl border border-brand/15"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-3 p-4 border-b border-brand/15">

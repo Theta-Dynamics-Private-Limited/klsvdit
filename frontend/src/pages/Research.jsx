@@ -31,7 +31,7 @@ const Research = () => {
         </div>
       </section>
 
-      <section id="publications" className="bg-[#f1e6d2]/60 py-16">
+      <section id="publications" className="bg-surface-alt/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="text-3xl md:text-4xl text-brand mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recent Publications &amp; Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

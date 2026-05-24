@@ -31,7 +31,7 @@ const Campus = () => {
         </p>
       </section>
 
-      <section id="facilities" className="bg-[#f1e6d2]/60 py-16">
+      <section id="facilities" className="bg-surface-alt/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="text-3xl md:text-4xl text-brand mb-10 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Facilities</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -61,7 +61,7 @@ const Campus = () => {
         </div>
       </section>
 
-      <section id="hostels" className="bg-[#f1e6d2]/60 py-16">
+      <section id="hostels" className="bg-surface-alt/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl text-brand mb-3 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Stay@VDIT</h2>

@@ -24,7 +24,7 @@ const StudentClubs = () => {
               onClick={() => setCat(c)}
               className={`px-4 py-2 text-xs rounded-full font-sans-ui font-semibold tracking-wider ${
                 cat === c
-                  ? "bg-brand text-[#f7efe2]"
+                  ? "bg-brand text-surface"
                   : "bg-white text-brand border border-brand/30 hover:bg-brand/10"
               }`}
             >

@@ -70,7 +70,7 @@ const People = () => {
               onClick={() => setDeptFilter("all")}
               className={`px-3 py-1.5 text-xs rounded-full font-sans-ui ${
                 dept === "all"
-                  ? "bg-brand text-[#f7efe2]"
+                  ? "bg-brand text-surface"
                   : "bg-white text-brand border border-brand/30"
               }`}
             >
@@ -82,7 +82,7 @@ const People = () => {
                 onClick={() => setDeptFilter(d.short)}
                 className={`px-3 py-1.5 text-xs rounded-full font-sans-ui ${
                   dept === d.short
-                    ? "bg-brand text-[#f7efe2]"
+                    ? "bg-brand text-surface"
                     : "bg-white text-brand border border-brand/30"
                 }`}
               >
@@ -137,7 +137,7 @@ const People = () => {
       {tab === "admin" && (
         <div className="bg-white border border-brand/15">
           <table className="w-full text-sm">
-            <thead className="bg-brand text-[#f7efe2]">
+            <thead className="bg-brand text-surface">
               <tr>
                 <th className="text-left p-3">Name</th>
                 <th className="text-left p-3">Role</th>
@@ -145,7 +145,7 @@ const People = () => {
             </thead>
             <tbody>
               {adminStaff.map((a) => (
-                <tr key={a.id} className="odd:bg-[#f7efe2]/40">
+                <tr key={a.id} className="odd:bg-surface/40">
                   <td className="p-3 border-t border-brand/10">{a.name}</td>
                   <td className="p-3 border-t border-brand/10 italic">{a.role}</td>
                 </tr>

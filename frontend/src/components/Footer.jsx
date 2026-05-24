@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f1e6d2] border-t border-brand/15 mt-16">
+    <footer className="bg-surface-alt border-t border-brand/15 mt-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           <div className="col-span-2 md:col-span-1 lg:col-span-1">
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <button className="w-full bg-brand text-[#f7efe2] py-3 px-4 text-sm font-semibold rounded hover:bg-brand-dark transition-colors font-sans-ui">
+            <button className="w-full bg-brand text-surface py-3 px-4 text-sm font-semibold rounded hover:bg-brand-dark transition-colors font-sans-ui">
               Subscribe to our newsletter
             </button>
             <div className="mt-5 flex gap-3 text-brand">

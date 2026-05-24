@@ -78,7 +78,7 @@ const ProgrammeDetail = () => {
         ]}
       />
 
-      <section className="bg-[#f1e6d2]/60 border-b border-brand/10">
+      <section className="bg-surface-alt/60 border-b border-brand/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-3 flex flex-wrap gap-x-6 gap-y-2 text-xs font-sans-ui font-semibold tracking-wider text-brand">
           {[
             ["overview", "Overview"],
@@ -384,7 +384,7 @@ const ProgrammeDetail = () => {
               </div>
               <Link
                 to="/admissions"
-                className="block mt-5 text-center bg-brand text-[#f7efe2] py-2.5 text-sm font-semibold font-sans-ui hover:bg-brand-dark transition"
+                className="block mt-5 text-center bg-brand text-surface py-2.5 text-sm font-semibold font-sans-ui hover:bg-brand-dark transition"
               >
                 Apply for {dept.short}
               </Link>

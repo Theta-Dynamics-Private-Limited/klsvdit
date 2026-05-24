@@ -66,7 +66,7 @@ const Home = () => {
         <div className="mt-10 text-center">
           <Link
             to="/news-events"
-            className="inline-flex items-center gap-2 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
+            className="inline-flex items-center gap-2 bg-brand text-surface px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
           >
             More News <ArrowRight size={16} />
           </Link>
@@ -74,7 +74,7 @@ const Home = () => {
       </section>
 
       {/* Events */}
-      <section className="bg-[#f1e6d2]/60 py-16">
+      <section className="bg-surface-alt/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <SectionTitle>Events</SectionTitle>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -97,7 +97,7 @@ const Home = () => {
           <div className="mt-10 text-center">
             <Link
               to="/news-events"
-              className="inline-flex items-center gap-2 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
+              className="inline-flex items-center gap-2 bg-brand text-surface px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
             >
               More Events <ArrowRight size={16} />
             </Link>
@@ -123,7 +123,7 @@ const Home = () => {
       </section>
 
       {/* Study/Departments */}
-      <section className="bg-[#f1e6d2]/60 py-20">
+      <section className="bg-surface-alt/60 py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <SectionTitle sub="Six departments. Hundreds of opportunities.">
             Study at VDIT
@@ -187,7 +187,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/academics"
-              className="inline-flex items-center gap-2 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
+              className="inline-flex items-center gap-2 bg-brand text-surface px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
             >
               Know More <ArrowRight size={16} />
             </Link>
@@ -215,10 +215,10 @@ const Home = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <div className="text-[#f7efe2]/85 text-xs tracking-widest font-sans-ui">
+                <div className="text-surface/85 text-xs tracking-widest font-sans-ui">
                   {d.short}
                 </div>
-                <h3 className="text-[#f7efe2] text-xl font-semibold mt-1 leading-snug">
+                <h3 className="text-surface text-xl font-semibold mt-1 leading-snug">
                   {d.name}
                 </h3>
               </div>
@@ -228,7 +228,7 @@ const Home = () => {
       </section>
 
       {/* Community / Leaders carousel */}
-      <section className="bg-[#f1e6d2]/60 py-20">
+      <section className="bg-surface-alt/60 py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <SectionTitle sub="Meet the people steering VDIT">
             VDIT Community
@@ -237,7 +237,7 @@ const Home = () => {
             <button
               onClick={prev}
               disabled={leaderIdx === 0}
-              className="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-brand text-[#f7efe2] rounded-full p-2 disabled:opacity-30 hover:bg-brand-dark"
+              className="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-brand text-surface rounded-full p-2 disabled:opacity-30 hover:bg-brand-dark"
               aria-label="Previous"
             >
               <ChevronLeft size={22} />
@@ -245,7 +245,7 @@ const Home = () => {
             <button
               onClick={next}
               disabled={leaderIdx === maxIdx}
-              className="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-brand text-[#f7efe2] rounded-full p-2 disabled:opacity-30 hover:bg-brand-dark"
+              className="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-brand text-surface rounded-full p-2 disabled:opacity-30 hover:bg-brand-dark"
               aria-label="Next"
             >
               <ChevronRight size={22} />
@@ -359,7 +359,7 @@ const ExploreTile = ({ label, to, image }) => (
     <div className="absolute inset-0 bg-brand-dark/40 group-hover:bg-brand-dark/60 transition" />
     <div className="absolute inset-0 flex items-center justify-center">
       <span
-        className="text-[#f7efe2] text-xl md:text-2xl font-semibold tracking-wide flex items-center gap-2"
+        className="text-surface text-xl md:text-2xl font-semibold tracking-wide flex items-center gap-2"
         style={{ fontFamily: "'Cormorant Garamond', serif" }}
       >
         {label} <ArrowRight size={18} />

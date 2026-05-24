@@ -13,16 +13,16 @@ const PageHero = ({ title, sub, image }) => (
     <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/85 via-brand-dark/55 to-brand-dark/15" />
     <div className="absolute inset-0 flex items-end pb-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
-        <p className="text-[#f7efe2]/85 text-xs md:text-sm tracking-[0.25em] font-sans-ui mb-2">
+        <p className="text-surface/85 text-xs md:text-sm tracking-[0.25em] font-sans-ui mb-2">
           KLS VDIT
         </p>
         <h1
-          className="text-[#f7efe2] text-4xl md:text-6xl font-semibold"
+          className="text-surface text-4xl md:text-6xl font-semibold"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           {title}
         </h1>
-        <p className="text-[#f7efe2]/85 mt-2 italic text-base md:text-lg">
+        <p className="text-surface/85 mt-2 italic text-base md:text-lg">
           {sub}
         </p>
       </div>
@@ -66,7 +66,7 @@ const About = () => {
         </div>
       </section>
 
-      <section id="history" className="bg-[#f1e6d2]/60 py-16">
+      <section id="history" className="bg-surface-alt/60 py-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2
             className="text-3xl md:text-4xl text-brand mb-6 font-semibold"
@@ -132,7 +132,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="bg-[#f1e6d2]/60 py-16">
+      <section className="bg-surface-alt/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2
             className="text-3xl md:text-4xl text-brand mb-10 font-semibold"
@@ -182,7 +182,7 @@ const About = () => {
         </div>
       </section>
 
-      <section id="alumni" className="bg-[#f1e6d2]/60 py-16">
+      <section id="alumni" className="bg-surface-alt/60 py-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
           <h2 className="text-3xl md:text-4xl text-brand mb-4 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Alumni Network</h2>
           <p className="text-[#2a2a2a]/90 leading-relaxed text-[15.5px]">
@@ -191,7 +191,7 @@ const About = () => {
             Association connects current students with mentors, internships and
             career opportunities.
           </p>
-          <Link to="/admissions" className="inline-flex items-center gap-2 mt-6 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition">
+          <Link to="/admissions" className="inline-flex items-center gap-2 mt-6 bg-brand text-surface px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition">
             Join the network <ArrowRight size={16} />
           </Link>
         </div>

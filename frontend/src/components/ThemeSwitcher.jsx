@@ -29,7 +29,7 @@ const ThemeSwitcher = () => {
         onClick={() => setOpen((p) => !p)}
         aria-label="Change colour theme"
         aria-expanded={open}
-        className="flex items-center gap-1.5 border border-brand/30 px-3 py-1 rounded text-brand hover:bg-brand hover:text-[#f7efe2] transition-colors"
+        className="flex items-center gap-1.5 border border-brand/30 px-3 py-1 rounded text-brand hover:bg-brand hover:text-surface transition-colors"
       >
         <Palette size={14} />
         <span
@@ -40,7 +40,7 @@ const ThemeSwitcher = () => {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-64 bg-[#f7efe2] border border-brand/20 shadow-xl z-50 mega-anim">
+        <div className="absolute right-0 top-full mt-2 w-64 bg-surface border border-brand/20 shadow-xl z-50 mega-anim">
           <div className="px-4 py-2.5 border-b border-brand/15">
             <p className="text-[11px] uppercase tracking-widest text-brand font-semibold font-sans-ui">
               Colour theme
@@ -63,7 +63,7 @@ const ThemeSwitcher = () => {
                     }`}
                   >
                     <span
-                      className="w-7 h-7 rounded-full ring-2 ring-offset-2 ring-offset-[#f7efe2] flex-shrink-0"
+                      className="w-7 h-7 rounded-full ring-2 ring-offset-2 ring-offset-surface flex-shrink-0"
                       style={{ backgroundColor: t.hex, boxShadow: `0 0 0 1px ${t.hex}` }}
                     />
                     <span className="flex-1">

@@ -60,7 +60,7 @@ const Admissions = () => {
               "Report at VDIT with original documents and complete enrolment",
             ].map((step, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <span className="w-7 h-7 rounded-full bg-brand text-[#f7efe2] text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-sans-ui font-semibold">
+                <span className="w-7 h-7 rounded-full bg-brand text-surface text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-sans-ui font-semibold">
                   {i + 1}
                 </span>
                 <span className="text-[15px] text-[#2a2a2a]">{step}</span>
@@ -75,7 +75,7 @@ const Admissions = () => {
 
           {submitted ? (
             <div className="py-10 text-center">
-              <div className="w-14 h-14 rounded-full bg-brand mx-auto flex items-center justify-center text-[#f7efe2] mb-4">
+              <div className="w-14 h-14 rounded-full bg-brand mx-auto flex items-center justify-center text-surface mb-4">
                 <Check size={28} />
               </div>
               <p className="text-brand font-semibold text-xl mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Thank you!</p>
@@ -110,7 +110,7 @@ const Admissions = () => {
                   ))}
                 </div>
               </div>
-              <button type="submit" className="w-full bg-brand text-[#f7efe2] py-3 text-sm font-semibold hover:bg-brand-dark transition flex items-center justify-center gap-2 rounded">
+              <button type="submit" className="w-full bg-brand text-surface py-3 text-sm font-semibold hover:bg-brand-dark transition flex items-center justify-center gap-2 rounded">
                 Enquire <ArrowRight size={16} />
               </button>
             </form>
@@ -118,7 +118,7 @@ const Admissions = () => {
         </div>
       </section>
 
-      <section id="eligibility" className="bg-[#f1e6d2]/60 py-16">
+      <section id="eligibility" className="bg-surface-alt/60 py-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2 className="text-3xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Eligibility</h2>
           <ul className="space-y-3 text-[15px] text-[#2a2a2a]/85">
@@ -133,7 +133,7 @@ const Admissions = () => {
         <h2 className="text-3xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Fee Structure (Indicative)</h2>
         <div className="overflow-x-auto bg-white border border-brand/15">
           <table className="w-full text-sm">
-            <thead className="bg-brand text-[#f7efe2]">
+            <thead className="bg-brand text-surface">
               <tr>
                 <th className="text-left p-3">Programme</th>
                 <th className="text-left p-3">CET / Govt. Quota</th>
@@ -148,7 +148,7 @@ const Admissions = () => {
                 ["B.E. Mech / Civil", "₹ 55,000", "₹ 1,35,000", "₹ 1,65,000"],
                 ["M.Tech (CSE / DE)", "₹ 60,000", "—", "₹ 1,20,000"],
               ].map((row) => (
-                <tr key={row[0]} className="odd:bg-[#f7efe2]/40">
+                <tr key={row[0]} className="odd:bg-surface/40">
                   {row.map((c, i) => (
                     <td key={i} className="p-3 border-t border-brand/10">{c}</td>
                   ))}
@@ -160,7 +160,7 @@ const Admissions = () => {
         <p className="text-xs text-[#3a3a3a]/70 mt-3">* Fees are indicative and subject to revision per VTU / KEA / KLS norms each academic year.</p>
       </section>
 
-      <section id="scholarships" className="bg-[#f1e6d2]/60 py-16">
+      <section id="scholarships" className="bg-surface-alt/60 py-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2 className="text-3xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Scholarships</h2>
           <div className="grid md:grid-cols-2 gap-6">

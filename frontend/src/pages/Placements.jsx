@@ -30,12 +30,12 @@ const Placements = () => {
         </div>
       </section>
 
-      <section id="recruiters" className="bg-[#f1e6d2]/60 py-14">
+      <section id="recruiters" className="bg-surface-alt/60 py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="text-3xl md:text-4xl text-brand mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Top Recruiters</h2>
           <div className="bg-white border border-brand/15">
             <table className="w-full text-sm">
-              <thead className="bg-brand text-[#f7efe2]">
+              <thead className="bg-brand text-surface">
                 <tr>
                   <th className="text-left p-3">Company</th>
                   <th className="text-left p-3">Offers (2025-26)</th>
@@ -44,7 +44,7 @@ const Placements = () => {
               </thead>
               <tbody>
                 {placements.map((p) => (
-                  <tr key={p.company} className="odd:bg-[#f7efe2]/40">
+                  <tr key={p.company} className="odd:bg-surface/40">
                     <td className="p-3 border-t border-brand/10 font-semibold text-brand">{p.company}</td>
                     <td className="p-3 border-t border-brand/10">{p.offers}</td>
                     <td className="p-3 border-t border-brand/10 italic">{p.role}</td>

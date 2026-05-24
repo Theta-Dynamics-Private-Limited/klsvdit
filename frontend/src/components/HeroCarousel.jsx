@@ -44,16 +44,16 @@ const HeroCarousel = () => {
                 key={current}
                 className="max-w-2xl bg-[#2a1a1f]/70 backdrop-blur-sm p-6 md:p-8 fade-in-up"
               >
-                <div className="text-[#f7efe2]/90 font-sans-ui text-xs md:text-sm tracking-[0.2em] mb-2">
+                <div className="text-surface/90 font-sans-ui text-xs md:text-sm tracking-[0.2em] mb-2">
                   {slide.cta}
                 </div>
                 <h1
-                  className="text-[#f7efe2] text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight"
+                  className="text-surface text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   {slide.title}
                 </h1>
-                <p className="text-[#f7efe2]/85 mt-3 text-base md:text-lg italic">
+                <p className="text-surface/85 mt-3 text-base md:text-lg italic">
                   {slide.subtitle}
                 </p>
               </div>
@@ -65,14 +65,14 @@ const HeroCarousel = () => {
       {/* Arrows */}
       <button
         onClick={goPrev}
-        className="absolute right-20 md:right-24 bottom-6 z-20 bg-[#f7efe2]/90 hover:bg-[#f7efe2] text-brand rounded-full p-2.5 shadow-md transition"
+        className="absolute right-20 md:right-24 bottom-6 z-20 bg-surface/90 hover:bg-surface text-brand rounded-full p-2.5 shadow-md transition"
         aria-label="Previous slide"
       >
         <ChevronLeft size={20} />
       </button>
       <button
         onClick={goNext}
-        className="absolute right-6 bottom-6 z-20 bg-[#f7efe2]/90 hover:bg-[#f7efe2] text-brand rounded-full p-2.5 shadow-md transition"
+        className="absolute right-6 bottom-6 z-20 bg-surface/90 hover:bg-surface text-brand rounded-full p-2.5 shadow-md transition"
         aria-label="Next slide"
       >
         <ChevronRight size={20} />
@@ -85,7 +85,7 @@ const HeroCarousel = () => {
             key={idx}
             onClick={() => setCurrent(idx)}
             className={`h-2 rounded-full transition-all ${
-              idx === current ? "w-8 bg-[#f7efe2]" : "w-2 bg-[#f7efe2]/50"
+              idx === current ? "w-8 bg-surface" : "w-2 bg-surface/50"
             }`}
             aria-label={`Slide ${idx + 1}`}
           />

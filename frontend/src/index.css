@@ -9,8 +9,9 @@ body {
     font-family: 'Lora', Georgia, 'Times New Roman', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f7efe2;
+    background-color: rgb(var(--surface));
     color: #2a2a2a;
+    transition: background-color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,18 +66,26 @@ code {
         --brand: 122 29 44;       /* #7a1d2c — default maroon */
         --brand-dark: 91 20 33;   /* #5b1421 */
         --brand-darker: 63 14 23; /* #3f0e17 */
+
+        /* Surface (page background) tokens, themeable */
+        --surface: 247 239 226;       /* #f7efe2 — warm cream */
+        --surface-alt: 241 230 210;   /* #f1e6d2 — deeper cream */
     }
 
     html[data-theme="navy"] {
         --brand: 30 58 138;       /* #1e3a8a */
         --brand-dark: 21 41 97;   /* #15296b */
         --brand-darker: 14 27 64; /* #0e1b40 */
+        --surface: 240 243 248;       /* #f0f3f8 — cool ivory */
+        --surface-alt: 223 229 239;   /* #dfe5ef — light slate-blue */
     }
 
     html[data-theme="green"] {
         --brand: 6 95 70;         /* #065f46 */
         --brand-dark: 4 71 54;    /* #044736 */
         --brand-darker: 3 51 39;  /* #033327 */
+        --surface: 244 241 230;       /* #f4f1e6 — warm parchment */
+        --surface-alt: 232 226 207;   /* #e8e2cf — deeper parchment */
     }
 }
 
@@ -97,10 +106,10 @@ code {
     background-color: rgb(var(--brand));
 }
 .cream-bg {
-    background-color: hsl(var(--nls-cream));
+    background-color: rgb(var(--surface-alt));
 }
 .cream-light-bg {
-    background-color: hsl(var(--nls-cream-light));
+    background-color: rgb(var(--surface));
 }
 
 /* Smooth fade in animations */
@@ -169,7 +178,7 @@ code {
     height: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: hsl(var(--nls-cream-light));
+    background: rgb(var(--surface));
 }
 ::-webkit-scrollbar-thumb {
     background: rgb(var(--brand) / 0.5);

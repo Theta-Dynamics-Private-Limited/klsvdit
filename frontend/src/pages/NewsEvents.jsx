@@ -48,7 +48,7 @@ const NewsEvents = () => {
                   onClick={() => setFilter(c)}
                   className={`px-3 py-1.5 text-xs rounded-full font-sans-ui ${
                     filter === c
-                      ? "bg-brand text-[#f7efe2]"
+                      ? "bg-brand text-surface"
                       : "bg-white text-brand border border-brand/30"
                   }`}
                 >

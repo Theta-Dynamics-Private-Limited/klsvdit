@@ -41,15 +41,15 @@ const EventDetail = () => {
           </Link>
         )}
         <div className="mt-10 flex flex-wrap gap-3">
-          <button className="bg-brand text-[#f7efe2] px-6 py-2.5 text-sm font-sans-ui font-semibold hover:bg-brand-dark transition">
+          <button className="bg-brand text-surface px-6 py-2.5 text-sm font-sans-ui font-semibold hover:bg-brand-dark transition">
             Add to Calendar
           </button>
-          <Link to="/news-events" className="border border-brand/40 text-brand px-6 py-2.5 text-sm font-sans-ui font-semibold hover:bg-brand hover:text-[#f7efe2] transition">
+          <Link to="/news-events" className="border border-brand/40 text-brand px-6 py-2.5 text-sm font-sans-ui font-semibold hover:bg-brand hover:text-surface transition">
             All Events
           </Link>
         </div>
       </section>
-      <section className="bg-[#f1e6d2]/60 py-14">
+      <section className="bg-surface-alt/60 py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h3 className="text-2xl text-brand font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Other Events</h3>
           <div className="grid md:grid-cols-3 gap-5">

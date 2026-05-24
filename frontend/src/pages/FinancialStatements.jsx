@@ -33,7 +33,7 @@ const FinancialStatements = () => (
               <p className="text-xs text-[#3a3a3a]/70">PDF · {s.size}</p>
             </div>
           </div>
-          <button className="text-xs flex items-center gap-1 text-brand border border-brand/40 px-3 py-1.5 rounded hover:bg-brand hover:text-[#f7efe2] transition">
+          <button className="text-xs flex items-center gap-1 text-brand border border-brand/40 px-3 py-1.5 rounded hover:bg-brand hover:text-surface transition">
             <Download size={14} /> Download
           </button>
         </div>

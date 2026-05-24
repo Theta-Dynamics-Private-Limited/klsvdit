@@ -20,9 +20,9 @@ const MandatoryDisclosure = () => (
     </div>
 
     <div className="bg-white border border-brand/15">
-      <div className="px-5 py-3 bg-[#f7efe2] border-b border-brand/15 flex items-center justify-between">
+      <div className="px-5 py-3 bg-surface border-b border-brand/15 flex items-center justify-between">
         <h3 className="text-brand font-semibold">Institute Information</h3>
-        <button className="text-xs flex items-center gap-1 text-brand border border-brand/40 px-3 py-1.5 rounded hover:bg-brand hover:text-[#f7efe2] transition">
+        <button className="text-xs flex items-center gap-1 text-brand border border-brand/40 px-3 py-1.5 rounded hover:bg-brand hover:text-surface transition">
           <Download size={14} /> AICTE 2026-27 (PDF)
         </button>
       </div>
@@ -43,7 +43,7 @@ const MandatoryDisclosure = () => (
             row("Phone", "08284 - 220 333 / 220 332"),
             row("Website", "https://klsvdit.edu.in"),
           ].map((r) => (
-            <tr key={r.label} className="odd:bg-[#f7efe2]/40">
+            <tr key={r.label} className="odd:bg-surface/40">
               <td className="p-3 border-t border-brand/10 font-semibold w-1/3">{r.label}</td>
               <td className="p-3 border-t border-brand/10">{r.value}</td>
             </tr>
@@ -55,7 +55,7 @@ const MandatoryDisclosure = () => (
     <h3 className="text-2xl text-brand font-semibold mt-10 mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Programmes Offered</h3>
     <div className="overflow-x-auto bg-white border border-brand/15">
       <table className="w-full text-sm">
-        <thead className="bg-brand text-[#f7efe2]">
+        <thead className="bg-brand text-surface">
           <tr>
             <th className="text-left p-3">Programme</th>
             <th className="text-left p-3">Duration</th>
@@ -74,7 +74,7 @@ const MandatoryDisclosure = () => (
             ["M.Tech Computer Science", "2 years", "18", "AICTE / VTU"],
             ["M.Tech Digital Electronics", "2 years", "18", "AICTE / VTU"],
           ].map((r) => (
-            <tr key={r[0]} className="odd:bg-[#f7efe2]/40">
+            <tr key={r[0]} className="odd:bg-surface/40">
               {r.map((c, i) => <td key={i} className="p-3 border-t border-brand/10">{c}</td>)}
             </tr>
           ))}

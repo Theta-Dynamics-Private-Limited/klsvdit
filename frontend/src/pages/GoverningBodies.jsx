@@ -22,7 +22,7 @@ const GoverningBodies = () => (
 
     <div className="overflow-x-auto bg-white border border-brand/15 mt-3">
       <table className="w-full text-sm">
-        <thead className="bg-brand text-[#f7efe2]">
+        <thead className="bg-brand text-surface">
           <tr>
             <th className="text-left p-3 w-16">#</th>
             <th className="text-left p-3">Name</th>
@@ -42,7 +42,7 @@ const GoverningBodies = () => (
             ["Faculty Representative (Senior)", "Member"],
             ["Dr. V. A. Kulkarni", "Ex-Officio Member & Principal"],
           ].map(([name, role], i) => (
-            <tr key={name + i} className="odd:bg-[#f7efe2]/40">
+            <tr key={name + i} className="odd:bg-surface/40">
               <td className="p-3 border-t border-brand/10 text-brand font-semibold">{i + 1}</td>
               <td className="p-3 border-t border-brand/10">{name}</td>
               <td className="p-3 border-t border-brand/10 italic">{role}</td>

@@ -28,14 +28,14 @@ const Logo = ({ size = 56 }) => {
       {/* Inner background */}
       <path
         d="M50 12 L84 22 V46 C84 66 69 81 50 88 C31 81 16 66 16 46 V22 Z"
-        fill="#f7efe2"
+        fill="rgb(var(--surface))"
       />
       {/* Open book */}
       <path
         d="M28 44 Q50 36 72 44 V58 Q50 50 28 58 Z"
         fill="rgb(var(--brand))"
       />
-      <line x1="50" y1="40" x2="50" y2="55" stroke="#f7efe2" strokeWidth="1.2" />
+      <line x1="50" y1="40" x2="50" y2="55" stroke="rgb(var(--surface))" strokeWidth="1.2" />
       {/* Lamp/torch on top */}
       <circle cx="50" cy="28" r="4" fill="rgb(var(--brand))" />
       <path d="M48 24 Q50 18 52 24" stroke="rgb(var(--brand))" strokeWidth="1.5" fill="none" />
@@ -50,7 +50,7 @@ const Logo = ({ size = 56 }) => {
         fontSize="6.5"
         fontWeight="700"
         textAnchor="middle"
-        fill="#f7efe2"
+        fill="rgb(var(--surface))"
         fontFamily="Georgia, serif"
       >
         VDIT
