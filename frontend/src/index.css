@@ -87,6 +87,22 @@ code {
         --surface: 244 241 230;       /* #f4f1e6 — warm parchment */
         --surface-alt: 232 226 207;   /* #e8e2cf — deeper parchment */
     }
+
+    html[data-theme="purple"] {
+        --brand: 76 29 149;       /* #4c1d95 — royal purple */
+        --brand-dark: 59 22 117;  /* #3b1675 */
+        --brand-darker: 42 16 84; /* #2a1054 */
+        --surface: 244 240 248;       /* #f4f0f8 — lavender ivory */
+        --surface-alt: 230 222 240;   /* #e6def0 — light lilac */
+    }
+
+    html[data-theme="slate"] {
+        --brand: 51 65 85;        /* #334155 — slate gray */
+        --brand-dark: 35 48 66;   /* #233042 */
+        --brand-darker: 22 32 46; /* #16202e */
+        --surface: 241 243 245;       /* #f1f3f5 — cool ivory */
+        --surface-alt: 223 227 232;   /* #dfe3e8 — light steel */
+    }
 }
 
 @layer base {

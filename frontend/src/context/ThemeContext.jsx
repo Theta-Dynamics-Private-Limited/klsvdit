@@ -19,6 +19,18 @@ export const THEMES = [
     hex: "#065f46",
     description: "Calm, sustainability-forward",
   },
+  {
+    id: "purple",
+    label: "Royal Purple",
+    hex: "#4c1d95",
+    description: "Regal, scholarly heritage feel",
+  },
+  {
+    id: "slate",
+    label: "Slate Gray",
+    hex: "#334155",
+    description: "Minimal, modern professional",
+  },
 ];
 
 const STORAGE_KEY = "vdit_theme";
