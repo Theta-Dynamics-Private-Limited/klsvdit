@@ -36,11 +36,11 @@ const OurHistory = () => (
       </p>
     </div>
 
-    <div className="relative pl-6 border-l-2 border-[#7a1d2c]/30 space-y-6">
+    <div className="relative pl-6 border-l-2 border-brand/30 space-y-6">
       {timeline.map(([year, event]) => (
         <div key={year} className="relative">
-          <div className="absolute -left-[31px] w-4 h-4 rounded-full bg-[#7a1d2c] ring-4 ring-[#f7efe2]" />
-          <div className="text-3xl text-[#7a1d2c] font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{year}</div>
+          <div className="absolute -left-[31px] w-4 h-4 rounded-full bg-brand ring-4 ring-[#f7efe2]" />
+          <div className="text-3xl text-brand font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{year}</div>
           <p className="text-[#2a2a2a]/85 text-[15px] mt-1">{event}</p>
         </div>
       ))}

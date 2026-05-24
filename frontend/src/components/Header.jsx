@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Search, Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import Logo from "./Logo";
 import SearchModal from "./SearchModal";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const topLinks = [
   { label: "Announcements", to: "/announcements" },
@@ -214,19 +215,20 @@ const Header = () => {
             <Link
               key={l.label}
               to={l.to}
-              className="text-[#7a1d2c] hover:text-[#5b1421] transition-colors"
+              className="text-brand hover:text-brand-dark transition-colors"
             >
               {l.label}
             </Link>
           ))}
           <button
             onClick={() => setSearchOpen(true)}
-            className="flex items-center gap-1 border border-[#7a1d2c]/30 px-3 py-1 rounded text-[#7a1d2c] hover:bg-[#7a1d2c] hover:text-[#f7efe2] transition-colors"
+            className="flex items-center gap-1 border border-brand/30 px-3 py-1 rounded text-brand hover:bg-brand hover:text-[#f7efe2] transition-colors"
             aria-label="Open search"
           >
             <Search size={14} />
             <span>Search</span>
           </button>
+          <ThemeSwitcher />
         </div>
 
         {/* Main nav row */}
@@ -235,7 +237,7 @@ const Header = () => {
             <Logo size={54} />
             <div className="leading-tight">
               <div
-                className="text-[#7a1d2c] font-bold text-2xl md:text-3xl tracking-wide"
+                className="text-brand font-bold text-2xl md:text-3xl tracking-wide"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 KLS VDIT
@@ -258,8 +260,8 @@ const Header = () => {
                 <NavLink
                   to={item.to}
                   className={({ isActive }) =>
-                    `nav-link text-[#2a2a2a] hover:text-[#7a1d2c] flex items-center gap-1 ${
-                      isActive ? "text-[#7a1d2c]" : ""
+                    `nav-link text-[#2a2a2a] hover:text-brand flex items-center gap-1 ${
+                      isActive ? "text-brand" : ""
                     }`
                   }
                 >
@@ -270,7 +272,7 @@ const Header = () => {
             ))}
             <button
               onClick={() => setSearchOpen(true)}
-              className="lg:hidden text-[#7a1d2c] p-2"
+              className="lg:hidden text-brand p-2"
               aria-label="Search"
             >
               <Search size={18} />
@@ -281,14 +283,14 @@ const Header = () => {
           <div className="lg:hidden flex items-center gap-1">
             <button
               onClick={() => setSearchOpen(true)}
-              className="p-2 text-[#7a1d2c]"
+              className="p-2 text-brand"
               aria-label="Search"
             >
               <Search size={22} />
             </button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 text-[#7a1d2c]"
+              className="p-2 text-brand"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={28} /> : <Menu size={28} />}
@@ -301,7 +303,7 @@ const Header = () => {
           <div
             onMouseEnter={() => setOpenMega(openMega)}
             onMouseLeave={() => setOpenMega(null)}
-            className="hidden lg:block absolute left-0 right-0 top-full bg-[#f7efe2] border-t border-[#7a1d2c]/15 shadow-xl mega-anim z-40"
+            className="hidden lg:block absolute left-0 right-0 top-full bg-[#f7efe2] border-t border-brand/15 shadow-xl mega-anim z-40"
           >
             {(() => {
               const item = mainNav.find((i) => i.label === openMega);
@@ -310,7 +312,7 @@ const Header = () => {
                 <div className="max-w-7xl mx-auto px-10 py-8 grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-6">
                   {item.columns.map((col) => (
                     <div key={col.heading}>
-                      <h4 className="text-[11px] tracking-[0.18em] text-[#7a1d2c] font-sans-ui font-semibold mb-3 uppercase">
+                      <h4 className="text-[11px] tracking-[0.18em] text-brand font-sans-ui font-semibold mb-3 uppercase">
                         {col.heading}
                       </h4>
                       <ul className="space-y-2">
@@ -319,11 +321,11 @@ const Header = () => {
                             <Link
                               to={l.to}
                               onClick={() => setOpenMega(null)}
-                              className="text-[13.5px] text-[#2a2a2a] hover:text-[#7a1d2c] transition flex items-center gap-1.5"
+                              className="text-[13.5px] text-[#2a2a2a] hover:text-brand transition flex items-center gap-1.5"
                             >
                               <ChevronRight
                                 size={12}
-                                className="text-[#7a1d2c]/0 group-hover:text-[#7a1d2c]"
+                                className="text-brand/0 group-hover:text-brand"
                               />
                               {l.label}
                             </Link>
@@ -340,12 +342,12 @@ const Header = () => {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-[#f7efe2] border-t border-[#7a1d2c]/20 max-h-[80vh] overflow-y-auto">
+          <div className="lg:hidden bg-[#f7efe2] border-t border-brand/20 max-h-[80vh] overflow-y-auto">
             <div className="px-4 py-4 space-y-1 font-sans-ui">
               {mainNav.map((item) => (
                 <div
                   key={item.label}
-                  className="border-b border-[#7a1d2c]/10"
+                  className="border-b border-brand/10"
                 >
                   <button
                     onClick={() => {
@@ -381,7 +383,7 @@ const Header = () => {
                     <div className="pl-4 pb-3 space-y-3">
                       {item.columns.map((col) => (
                         <div key={col.heading}>
-                          <p className="text-[10.5px] uppercase text-[#7a1d2c] font-semibold tracking-widest mb-1.5 mt-2">
+                          <p className="text-[10.5px] uppercase text-brand font-semibold tracking-widest mb-1.5 mt-2">
                             {col.heading}
                           </p>
                           <ul className="space-y-1.5">
@@ -390,7 +392,7 @@ const Header = () => {
                                 <Link
                                   to={l.to}
                                   onClick={() => setMobileOpen(false)}
-                                  className="block py-1 text-[13px] text-[#2a2a2a]/85 hover:text-[#7a1d2c]"
+                                  className="block py-1 text-[13px] text-[#2a2a2a]/85 hover:text-brand"
                                 >
                                   {l.label}
                                 </Link>
@@ -409,11 +411,14 @@ const Header = () => {
                     key={l.label}
                     to={l.to}
                     onClick={() => setMobileOpen(false)}
-                    className="text-[#7a1d2c] py-1"
+                    className="text-brand py-1"
                   >
                     {l.label}
                   </Link>
                 ))}
+                <div className="pt-2">
+                  <ThemeSwitcher />
+                </div>
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ const Academics = () => {
 
       <section id="departments" className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-10 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <h2 className="text-3xl md:text-4xl text-brand mb-10 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Departments
           </h2>
           <div className="space-y-12">
@@ -38,8 +38,8 @@ const Academics = () => {
                   <img src={d.image} alt={d.name} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className={`${idx % 2 === 1 ? "md:order-1" : ""}`}>
-                  <span className="text-xs tracking-[0.2em] text-[#7a1d2c] font-sans-ui">{d.short}</span>
-                  <h3 className="text-2xl md:text-3xl text-[#7a1d2c] font-semibold mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <span className="text-xs tracking-[0.2em] text-brand font-sans-ui">{d.short}</span>
+                  <h3 className="text-2xl md:text-3xl text-brand font-semibold mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                     {d.name}
                   </h3>
                   <p className="mt-3 text-[#2a2a2a]/85 leading-relaxed">{d.description}</p>
@@ -57,11 +57,11 @@ const Academics = () => {
       </section>
 
       <section id="calendar" className="max-w-5xl mx-auto px-6 lg:px-10 py-16">
-        <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+        <h2 className="text-3xl md:text-4xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
           Academic Calendar
         </h2>
-        <div className="bg-white p-6 border border-[#7a1d2c]/10">
-          <ul className="divide-y divide-[#7a1d2c]/10">
+        <div className="bg-white p-6 border border-brand/10">
+          <ul className="divide-y divide-brand/10">
             {[
               ["Commencement of odd semester", "August 4, 2026"],
               ["Mid-term examinations · Sem I", "September 22-26, 2026"],
@@ -72,7 +72,7 @@ const Academics = () => {
             ].map(([k, v]) => (
               <li key={k} className="py-3 flex justify-between text-sm">
                 <span>{k}</span>
-                <span className="text-[#7a1d2c] font-medium">{v}</span>
+                <span className="text-brand font-medium">{v}</span>
               </li>
             ))}
           </ul>
@@ -83,11 +83,11 @@ const Academics = () => {
 };
 
 const Card = ({ icon: Icon, title, body }) => (
-  <div className="bg-white p-8 border border-[#7a1d2c]/10 card-hover">
-    <div className="w-12 h-12 rounded-full bg-[#7a1d2c]/10 flex items-center justify-center text-[#7a1d2c] mb-4">
+  <div className="bg-white p-8 border border-brand/10 card-hover">
+    <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand mb-4">
       <Icon size={22} />
     </div>
-    <h3 className="text-2xl text-[#7a1d2c] font-semibold mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{title}</h3>
+    <h3 className="text-2xl text-brand font-semibold mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{title}</h3>
     <p className="text-[#3a3a3a]/85 text-sm leading-relaxed">{body}</p>
   </div>
 );

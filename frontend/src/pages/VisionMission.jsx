@@ -25,28 +25,28 @@ const VisionMission = () => (
     breadcrumbs={[{ label: "About", to: "/about" }, { label: "Vision & Mission" }]}
   >
     <div className="grid md:grid-cols-2 gap-8">
-      <div className="bg-white border border-[#7a1d2c]/15 p-7">
-        <Compass size={28} className="text-[#7a1d2c] mb-3" />
-        <h2 className="text-3xl text-[#7a1d2c] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Vision</h2>
+      <div className="bg-white border border-brand/15 p-7">
+        <Compass size={28} className="text-brand mb-3" />
+        <h2 className="text-3xl text-brand font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Vision</h2>
         <p className="text-[15.5px] italic text-[#2a2a2a]/85 leading-relaxed">
           To nurture talent and enrich society through excellence in technical
           education, research and innovation.
         </p>
       </div>
-      <div className="bg-white border border-[#7a1d2c]/15 p-7">
-        <Target size={28} className="text-[#7a1d2c] mb-3" />
-        <h2 className="text-3xl text-[#7a1d2c] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Mission</h2>
+      <div className="bg-white border border-brand/15 p-7">
+        <Target size={28} className="text-brand mb-3" />
+        <h2 className="text-3xl text-brand font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Mission</h2>
         <ol className="list-decimal list-inside space-y-2 text-[#2a2a2a]/85 text-[15px] leading-relaxed">
           {missions.map((m) => <li key={m}>{m}</li>)}
         </ol>
       </div>
     </div>
 
-    <h2 className="text-3xl text-[#7a1d2c] font-semibold mt-12 mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Core Values</h2>
+    <h2 className="text-3xl text-brand font-semibold mt-12 mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Core Values</h2>
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {values.map(([title, desc]) => (
-        <div key={title} className="border-l-4 border-[#7a1d2c] bg-white p-5">
-          <h3 className="text-xl text-[#7a1d2c] font-semibold mb-1">{title}</h3>
+        <div key={title} className="border-l-4 border-brand bg-white p-5">
+          <h3 className="text-xl text-brand font-semibold mb-1">{title}</h3>
           <p className="text-sm text-[#3a3a3a]/85">{desc}</p>
         </div>
       ))}

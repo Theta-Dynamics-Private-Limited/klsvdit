@@ -20,9 +20,9 @@ const GoverningBodies = () => (
       <h3>Local Governing Council (LGC)</h3>
     </div>
 
-    <div className="overflow-x-auto bg-white border border-[#7a1d2c]/15 mt-3">
+    <div className="overflow-x-auto bg-white border border-brand/15 mt-3">
       <table className="w-full text-sm">
-        <thead className="bg-[#7a1d2c] text-[#f7efe2]">
+        <thead className="bg-brand text-[#f7efe2]">
           <tr>
             <th className="text-left p-3 w-16">#</th>
             <th className="text-left p-3">Name</th>
@@ -43,22 +43,22 @@ const GoverningBodies = () => (
             ["Dr. V. A. Kulkarni", "Ex-Officio Member & Principal"],
           ].map(([name, role], i) => (
             <tr key={name + i} className="odd:bg-[#f7efe2]/40">
-              <td className="p-3 border-t border-[#7a1d2c]/10 text-[#7a1d2c] font-semibold">{i + 1}</td>
-              <td className="p-3 border-t border-[#7a1d2c]/10">{name}</td>
-              <td className="p-3 border-t border-[#7a1d2c]/10 italic">{role}</td>
+              <td className="p-3 border-t border-brand/10 text-brand font-semibold">{i + 1}</td>
+              <td className="p-3 border-t border-brand/10">{name}</td>
+              <td className="p-3 border-t border-brand/10 italic">{role}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
 
-    <h3 className="text-2xl text-[#7a1d2c] font-semibold mt-10 mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Members of Karnatak Law Society</h3>
+    <h3 className="text-2xl text-brand font-semibold mt-10 mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Members of Karnatak Law Society</h3>
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {leaders.map((l) => (
-        <div key={l.id} className="bg-white p-4 border border-[#7a1d2c]/15 flex items-center gap-3">
+        <div key={l.id} className="bg-white p-4 border border-brand/15 flex items-center gap-3">
           <img src={l.image} alt={l.name} className="w-14 h-14 rounded-full object-cover" />
           <div>
-            <p className="text-[#7a1d2c] font-semibold text-sm">{l.name}</p>
+            <p className="text-brand font-semibold text-sm">{l.name}</p>
             <p className="text-xs text-[#3a3a3a] italic">{l.role}</p>
           </div>
         </div>

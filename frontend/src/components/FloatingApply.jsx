@@ -6,7 +6,7 @@ const FloatingApply = () => {
   return (
     <Link
       to="/admissions"
-      className="fixed bottom-6 right-6 z-40 bg-[#7a1d2c] text-[#f7efe2] hover:bg-[#5b1421] shadow-lg hover:shadow-xl transition-all rounded-full px-5 py-3 flex items-center gap-2 text-sm font-sans-ui font-semibold tracking-wider group"
+      className="fixed bottom-6 right-6 z-40 bg-brand text-[#f7efe2] hover:bg-brand-dark shadow-lg hover:shadow-xl transition-all rounded-full px-5 py-3 flex items-center gap-2 text-sm font-sans-ui font-semibold tracking-wider group"
     >
       <GraduationCap size={18} className="group-hover:rotate-12 transition" />
       <span className="hidden sm:inline">Apply Now</span>

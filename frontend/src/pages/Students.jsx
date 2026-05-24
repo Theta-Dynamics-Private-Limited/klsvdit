@@ -23,9 +23,9 @@ const Students = () => (
           [FileText, "Examination", "Exam schedule, hall ticket and results portal.", "/academics#exam"],
           [BookOpen, "VDIT Newsletter", "Read the latest monthly newsletter.", "/news-events"],
         ].map(([Icon, t, d, link]) => (
-          <Link key={t} to={link} className="bg-white p-5 border border-[#7a1d2c]/15 card-hover block">
-            <Icon size={22} className="text-[#7a1d2c] mb-2" />
-            <h3 className="text-[#7a1d2c] font-semibold">{t}</h3>
+          <Link key={t} to={link} className="bg-white p-5 border border-brand/15 card-hover block">
+            <Icon size={22} className="text-brand mb-2" />
+            <h3 className="text-brand font-semibold">{t}</h3>
             <p className="text-sm text-[#3a3a3a]/85 mt-1">{d}</p>
           </Link>
         ))}

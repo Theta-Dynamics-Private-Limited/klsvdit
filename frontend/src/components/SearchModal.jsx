@@ -88,11 +88,11 @@ const SearchModal = ({ open, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#f7efe2] w-full max-w-2xl shadow-2xl border border-[#7a1d2c]/15"
+        className="bg-[#f7efe2] w-full max-w-2xl shadow-2xl border border-brand/15"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center gap-3 p-4 border-b border-[#7a1d2c]/15">
-          <Search size={20} className="text-[#7a1d2c]" />
+        <div className="flex items-center gap-3 p-4 border-b border-brand/15">
+          <Search size={20} className="text-brand" />
           <input
             autoFocus
             value={q}
@@ -102,7 +102,7 @@ const SearchModal = ({ open, onClose }) => {
           />
           <button
             onClick={onClose}
-            className="text-[#7a1d2c] p-1 hover:bg-[#7a1d2c]/10 rounded"
+            className="text-brand p-1 hover:bg-brand/10 rounded"
             aria-label="Close"
           >
             <X size={20} />
@@ -111,7 +111,7 @@ const SearchModal = ({ open, onClose }) => {
         <div className="max-h-[60vh] overflow-y-auto">
           {!results ? (
             <div className="p-6">
-              <p className="text-xs text-[#7a1d2c] tracking-widest font-sans-ui font-semibold mb-3">
+              <p className="text-xs text-brand tracking-widest font-sans-ui font-semibold mb-3">
                 QUICK LINKS
               </p>
               <div className="grid grid-cols-2 gap-1">
@@ -119,7 +119,7 @@ const SearchModal = ({ open, onClose }) => {
                   <button
                     key={p.path}
                     onClick={() => go(p.path)}
-                    className="text-left px-3 py-2 text-sm hover:bg-[#7a1d2c]/10 rounded"
+                    className="text-left px-3 py-2 text-sm hover:bg-brand/10 rounded"
                   >
                     {p.title}
                   </button>
@@ -138,14 +138,14 @@ const SearchModal = ({ open, onClose }) => {
               ].map(([label, list]) =>
                 list.length ? (
                   <div key={label} className="mb-2">
-                    <div className="px-4 pt-3 pb-1 text-[11px] tracking-widest text-[#7a1d2c] font-sans-ui font-semibold">
+                    <div className="px-4 pt-3 pb-1 text-[11px] tracking-widest text-brand font-sans-ui font-semibold">
                       {label.toUpperCase()}
                     </div>
                     {list.map((r, i) => (
                       <button
                         key={`${label}-${i}`}
                         onClick={() => go(r.path)}
-                        className="w-full text-left px-4 py-2.5 hover:bg-[#7a1d2c]/10 transition"
+                        className="w-full text-left px-4 py-2.5 hover:bg-brand/10 transition"
                       >
                         <div className="text-sm text-[#2a2a2a] font-medium">{r.title}</div>
                         {r.desc && (
@@ -169,7 +169,7 @@ const SearchModal = ({ open, onClose }) => {
             </div>
           )}
         </div>
-        <div className="px-4 py-2 border-t border-[#7a1d2c]/15 text-[11px] text-[#3a3a3a]/70 font-sans-ui flex justify-between">
+        <div className="px-4 py-2 border-t border-brand/15 text-[11px] text-[#3a3a3a]/70 font-sans-ui flex justify-between">
           <span>Press Esc to close</span>
           <span>{results ? "Live results" : "Start typing to search"}</span>
         </div>

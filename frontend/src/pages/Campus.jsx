@@ -33,14 +33,14 @@ const Campus = () => {
 
       <section id="facilities" className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-10 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Facilities</h2>
+          <h2 className="text-3xl md:text-4xl text-brand mb-10 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Facilities</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {facilities.map(([Icon, t, d]) => (
-              <div key={t} className="bg-white p-6 border border-[#7a1d2c]/10 card-hover">
-                <div className="w-11 h-11 rounded-full bg-[#7a1d2c]/10 text-[#7a1d2c] flex items-center justify-center mb-3">
+              <div key={t} className="bg-white p-6 border border-brand/10 card-hover">
+                <div className="w-11 h-11 rounded-full bg-brand/10 text-brand flex items-center justify-center mb-3">
                   <Icon size={20} />
                 </div>
-                <h3 className="text-xl text-[#7a1d2c] font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{t}</h3>
+                <h3 className="text-xl text-brand font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{t}</h3>
                 <p className="text-[#3a3a3a]/85 text-sm mt-2 leading-relaxed">{d}</p>
               </div>
             ))}
@@ -51,7 +51,7 @@ const Campus = () => {
       <section id="library" className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-2 gap-10 items-center">
         <img src="https://images.pexels.com/photos/8423416/pexels-photo-8423416.jpeg?w=1200" alt="Library" className="w-full aspect-[4/3] object-cover" />
         <div>
-          <h2 className="text-3xl text-[#7a1d2c] mb-3 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Central Library</h2>
+          <h2 className="text-3xl text-brand mb-3 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Central Library</h2>
           <p className="text-[#2a2a2a]/85 leading-relaxed">
             The library has a rich collection of textbooks, reference works,
             journals and project reports across all engineering disciplines.
@@ -64,7 +64,7 @@ const Campus = () => {
       <section id="hostels" className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl text-[#7a1d2c] mb-3 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Stay@VDIT</h2>
+            <h2 className="text-3xl text-brand mb-3 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Stay@VDIT</h2>
             <p className="text-[#2a2a2a]/85 leading-relaxed">
               Separate boys' and girls' hostels are located within the campus.
               Rooms are airy and well-furnished. The mess serves vegetarian
@@ -79,7 +79,7 @@ const Campus = () => {
       <section id="sports" className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-2 gap-10 items-center">
         <img src="https://images.unsplash.com/photo-1607013407627-6ee814329547?w=1200&q=80" alt="Sports" className="w-full aspect-[4/3] object-cover" />
         <div>
-          <h2 className="text-3xl text-[#7a1d2c] mb-3 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Sports &amp; Cultural</h2>
+          <h2 className="text-3xl text-brand mb-3 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Sports &amp; Cultural</h2>
           <p className="text-[#2a2a2a]/85 leading-relaxed">
             VDIT teams have represented VTU in cricket, basketball and athletics
             events. The annual cultural fest showcases music, dance, drama and

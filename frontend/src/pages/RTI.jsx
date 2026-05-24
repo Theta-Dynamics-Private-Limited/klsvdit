@@ -25,22 +25,22 @@ const RTI = () => (
     </div>
 
     <div className="grid md:grid-cols-2 gap-4 mt-6">
-      <div className="bg-white p-6 border border-[#7a1d2c]/15">
-        <p className="text-xs uppercase tracking-widest text-[#7a1d2c] font-sans-ui font-semibold">Public Information Officer</p>
-        <h3 className="text-[#7a1d2c] text-xl font-semibold mt-2">Shri. Ravindra K. Patil</h3>
+      <div className="bg-white p-6 border border-brand/15">
+        <p className="text-xs uppercase tracking-widest text-brand font-sans-ui font-semibold">Public Information Officer</p>
+        <h3 className="text-brand text-xl font-semibold mt-2">Shri. Ravindra K. Patil</h3>
         <p className="text-sm italic text-[#3a3a3a]">Registrar, KLS VDIT</p>
         <div className="mt-3 space-y-1 text-sm text-[#2a2a2a]">
-          <p className="flex items-center gap-2"><Mail size={14} className="text-[#7a1d2c]" /> rti@klsvdit.edu.in</p>
-          <p className="flex items-center gap-2"><Phone size={14} className="text-[#7a1d2c]" /> 08284 - 220 333</p>
+          <p className="flex items-center gap-2"><Mail size={14} className="text-brand" /> rti@klsvdit.edu.in</p>
+          <p className="flex items-center gap-2"><Phone size={14} className="text-brand" /> 08284 - 220 333</p>
         </div>
       </div>
-      <div className="bg-white p-6 border border-[#7a1d2c]/15">
-        <p className="text-xs uppercase tracking-widest text-[#7a1d2c] font-sans-ui font-semibold">First Appellate Authority</p>
-        <h3 className="text-[#7a1d2c] text-xl font-semibold mt-2">Dr. V. A. Kulkarni</h3>
+      <div className="bg-white p-6 border border-brand/15">
+        <p className="text-xs uppercase tracking-widest text-brand font-sans-ui font-semibold">First Appellate Authority</p>
+        <h3 className="text-brand text-xl font-semibold mt-2">Dr. V. A. Kulkarni</h3>
         <p className="text-sm italic text-[#3a3a3a]">Principal, KLS VDIT</p>
         <div className="mt-3 space-y-1 text-sm text-[#2a2a2a]">
-          <p className="flex items-center gap-2"><Mail size={14} className="text-[#7a1d2c]" /> principal@klsvdit.edu.in</p>
-          <p className="flex items-center gap-2"><Phone size={14} className="text-[#7a1d2c]" /> 08284 - 220 332</p>
+          <p className="flex items-center gap-2"><Mail size={14} className="text-brand" /> principal@klsvdit.edu.in</p>
+          <p className="flex items-center gap-2"><Phone size={14} className="text-brand" /> 08284 - 220 332</p>
         </div>
       </div>
     </div>

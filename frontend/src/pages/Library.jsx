@@ -17,10 +17,10 @@ const Library = () => (
           [Wifi, "E-resources", "VTU Consortium, IEEE, Springer, DELNET"],
           [Clock, "Hours", "8:30 AM - 9:00 PM (Mon-Sat)"],
         ].map(([Icon, k, v]) => (
-          <div key={k} className="bg-white p-5 border border-[#7a1d2c]/15">
-            <Icon size={22} className="text-[#7a1d2c]" />
+          <div key={k} className="bg-white p-5 border border-brand/15">
+            <Icon size={22} className="text-brand" />
             <p className="text-xs uppercase tracking-widest text-[#3a3a3a]/85 mt-2">{k}</p>
-            <p className="text-lg text-[#7a1d2c] font-semibold mt-1">{v}</p>
+            <p className="text-lg text-brand font-semibold mt-1">{v}</p>
           </div>
         ))}
       </div>
@@ -28,7 +28,7 @@ const Library = () => (
 
     <section className="bg-[#f1e6d2]/60 py-14">
       <div className="max-w-5xl mx-auto px-6 lg:px-10 vdit-prose">
-        <h2 className="text-3xl text-[#7a1d2c] font-semibold mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>About the Library</h2>
+        <h2 className="text-3xl text-brand font-semibold mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>About the Library</h2>
         <p>
           The KLS VDIT Central Library is the academic heart of the campus. It
           maintains a comprehensive collection of textbooks, reference works,

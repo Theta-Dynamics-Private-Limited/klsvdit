@@ -8,7 +8,7 @@ const AboutVDIT = () => (
     image="https://images.pexels.com/photos/12091126/pexels-photo-12091126.jpeg?w=2400"
     breadcrumbs={[{ label: "About", to: "/about" }, { label: "About VDIT" }]}
   >
-    <h2 className="text-3xl md:text-4xl text-[#7a1d2c] font-semibold mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+    <h2 className="text-3xl md:text-4xl text-brand font-semibold mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
       Transforming Through Technology
     </h2>
     <div className="vdit-prose">
@@ -51,7 +51,7 @@ const AboutVDIT = () => (
           ["Placement", stats.placement],
         ].map(([k, v]) => (
           <div key={k}>
-            <div className="text-3xl text-[#7a1d2c] font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{v}</div>
+            <div className="text-3xl text-brand font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{v}</div>
             <div className="text-xs text-[#3a3a3a]/85 uppercase font-sans-ui tracking-wider mt-1">{k}</div>
           </div>
         ))}

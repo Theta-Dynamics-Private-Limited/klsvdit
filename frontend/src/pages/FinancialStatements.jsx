@@ -23,17 +23,17 @@ const FinancialStatements = () => (
         chartered accountant and approved by the Karnatak Law Society.
       </p>
     </div>
-    <div className="divide-y divide-[#7a1d2c]/10 bg-white border border-[#7a1d2c]/15">
+    <div className="divide-y divide-brand/10 bg-white border border-brand/15">
       {statements.map((s) => (
         <div key={s.year} className="p-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <FileText size={20} className="text-[#7a1d2c]" />
+            <FileText size={20} className="text-brand" />
             <div>
               <p className="font-semibold text-[#2a2a2a]">Annual Audited Statement, {s.year}</p>
               <p className="text-xs text-[#3a3a3a]/70">PDF · {s.size}</p>
             </div>
           </div>
-          <button className="text-xs flex items-center gap-1 text-[#7a1d2c] border border-[#7a1d2c]/40 px-3 py-1.5 rounded hover:bg-[#7a1d2c] hover:text-[#f7efe2] transition">
+          <button className="text-xs flex items-center gap-1 text-brand border border-brand/40 px-3 py-1.5 rounded hover:bg-brand hover:text-[#f7efe2] transition">
             <Download size={14} /> Download
           </button>
         </div>

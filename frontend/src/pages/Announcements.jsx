@@ -17,14 +17,14 @@ const Announcements = () => (
           <Link
             to={`/announcement/${a.id}`}
             key={a.id}
-            className="flex items-start gap-4 bg-white p-5 border border-[#7a1d2c]/15 card-hover"
+            className="flex items-start gap-4 bg-white p-5 border border-brand/15 card-hover"
           >
-            <div className="w-10 h-10 rounded-full bg-[#7a1d2c]/10 text-[#7a1d2c] flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-full bg-brand/10 text-brand flex items-center justify-center flex-shrink-0">
               <Megaphone size={18} />
             </div>
             <div className="flex-1">
               <p className="text-[#2a2a2a] font-medium leading-snug">{a.text}</p>
-              <p className="text-xs text-[#7a1d2c] mt-1 flex items-center gap-1 font-sans-ui"><Calendar size={12} /> {a.date}</p>
+              <p className="text-xs text-brand mt-1 flex items-center gap-1 font-sans-ui"><Calendar size={12} /> {a.date}</p>
             </div>
           </Link>
         ))}

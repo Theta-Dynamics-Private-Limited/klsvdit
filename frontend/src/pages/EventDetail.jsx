@@ -11,8 +11,8 @@ const EventDetail = () => {
   if (!e) {
     return (
       <main className="max-w-3xl mx-auto px-6 py-24">
-        <p className="text-[#7a1d2c] text-xl">Event not found.</p>
-        <Link to="/news-events" className="inline-flex items-center gap-2 text-[#7a1d2c] underline mt-3">
+        <p className="text-brand text-xl">Event not found.</p>
+        <Link to="/news-events" className="inline-flex items-center gap-2 text-brand underline mt-3">
           <ArrowLeft size={14} /> Back to News & Events
         </Link>
       </main>
@@ -36,26 +36,26 @@ const EventDetail = () => {
         </div>
         <p className="text-[#2a2a2a]/90 leading-relaxed text-[16px]">{e.description}</p>
         {dept && (
-          <Link to={`/programme/${dept.id}`} className="inline-flex items-center gap-1 mt-5 text-[#7a1d2c] hover:underline text-sm">
+          <Link to={`/programme/${dept.id}`} className="inline-flex items-center gap-1 mt-5 text-brand hover:underline text-sm">
             <ChevronRight size={14} /> Hosted by {dept.short} — visit department
           </Link>
         )}
         <div className="mt-10 flex flex-wrap gap-3">
-          <button className="bg-[#7a1d2c] text-[#f7efe2] px-6 py-2.5 text-sm font-sans-ui font-semibold hover:bg-[#5b1421] transition">
+          <button className="bg-brand text-[#f7efe2] px-6 py-2.5 text-sm font-sans-ui font-semibold hover:bg-brand-dark transition">
             Add to Calendar
           </button>
-          <Link to="/news-events" className="border border-[#7a1d2c]/40 text-[#7a1d2c] px-6 py-2.5 text-sm font-sans-ui font-semibold hover:bg-[#7a1d2c] hover:text-[#f7efe2] transition">
+          <Link to="/news-events" className="border border-brand/40 text-brand px-6 py-2.5 text-sm font-sans-ui font-semibold hover:bg-brand hover:text-[#f7efe2] transition">
             All Events
           </Link>
         </div>
       </section>
       <section className="bg-[#f1e6d2]/60 py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h3 className="text-2xl text-[#7a1d2c] font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Other Events</h3>
+          <h3 className="text-2xl text-brand font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Other Events</h3>
           <div className="grid md:grid-cols-3 gap-5">
             {others.map((o) => (
-              <Link to={`/event/${o.id}`} key={o.id} className="border-l-4 border-[#7a1d2c] bg-white p-5 card-hover block">
-                <div className="flex items-center gap-2 text-[#7a1d2c] text-xs tracking-wider font-sans-ui mb-2">
+              <Link to={`/event/${o.id}`} key={o.id} className="border-l-4 border-brand bg-white p-5 card-hover block">
+                <div className="flex items-center gap-2 text-brand text-xs tracking-wider font-sans-ui mb-2">
                   <Calendar size={13} />
                   {o.date} · {o.time}
                 </div>
@@ -70,8 +70,8 @@ const EventDetail = () => {
 };
 
 const Card = ({ icon: Icon, label, value }) => (
-  <div className="bg-white p-4 border border-[#7a1d2c]/15">
-    <div className="flex items-center gap-2 text-[#7a1d2c]"><Icon size={16} /> <span className="text-xs uppercase tracking-widest font-sans-ui font-semibold">{label}</span></div>
+  <div className="bg-white p-4 border border-brand/15">
+    <div className="flex items-center gap-2 text-brand"><Icon size={16} /> <span className="text-xs uppercase tracking-widest font-sans-ui font-semibold">{label}</span></div>
     <p className="mt-1 text-sm text-[#2a2a2a]">{value}</p>
   </div>
 );

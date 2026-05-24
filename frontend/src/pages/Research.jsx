@@ -13,7 +13,7 @@ const Research = () => {
       />
 
       <section id="areas" className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-        <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Research Areas</h2>
+        <h2 className="text-3xl md:text-4xl text-brand mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Research Areas</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             ["Applied AI & Machine Learning", "Deep learning, NLP, computer vision and edge intelligence for industry-grade applications."],
@@ -23,8 +23,8 @@ const Research = () => {
             ["Sustainable Civil Engineering", "Green construction materials, water resource management, and earthquake-resilient design."],
             ["Mechanical & Manufacturing", "Additive manufacturing, mechatronics, and thermal systems optimisation."],
           ].map(([t, d]) => (
-            <div key={t} className="p-6 bg-white border border-[#7a1d2c]/10 card-hover">
-              <h3 className="text-xl text-[#7a1d2c] font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{t}</h3>
+            <div key={t} className="p-6 bg-white border border-brand/10 card-hover">
+              <h3 className="text-xl text-brand font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{t}</h3>
               <p className="text-[#3a3a3a]/85 text-sm mt-2 leading-relaxed">{d}</p>
             </div>
           ))}
@@ -33,16 +33,16 @@ const Research = () => {
 
       <section id="publications" className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recent Publications &amp; Projects</h2>
+          <h2 className="text-3xl md:text-4xl text-brand mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Recent Publications &amp; Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {newsItems.slice(0, 3).map((n) => (
-              <Link to={`/news/${n.id}`} key={n.id} className="bg-white card-hover overflow-hidden border border-[#7a1d2c]/10 block">
+              <Link to={`/news/${n.id}`} key={n.id} className="bg-white card-hover overflow-hidden border border-brand/10 block">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img src={n.image} alt={n.title} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-5">
-                  <span className="text-xs text-[#7a1d2c] font-sans-ui">{n.date}</span>
-                  <h3 className="text-[#7a1d2c] text-lg font-semibold mt-1 leading-snug">{n.title}</h3>
+                  <span className="text-xs text-brand font-sans-ui">{n.date}</span>
+                  <h3 className="text-brand text-lg font-semibold mt-1 leading-snug">{n.title}</h3>
                 </div>
               </Link>
             ))}
@@ -51,8 +51,8 @@ const Research = () => {
       </section>
 
       <section id="centres" className="max-w-5xl mx-auto px-6 lg:px-10 py-16">
-        <h2 className="text-3xl text-[#7a1d2c] mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Research Centres</h2>
-        <ul className="divide-y divide-[#7a1d2c]/10 bg-white border border-[#7a1d2c]/10">
+        <h2 className="text-3xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Research Centres</h2>
+        <ul className="divide-y divide-brand/10 bg-white border border-brand/10">
           {[
             "VTU Research Centre · Computer Science & Engineering",
             "VTU Research Centre · Electronics & Communication Engineering",

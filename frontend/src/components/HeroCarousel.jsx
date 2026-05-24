@@ -65,14 +65,14 @@ const HeroCarousel = () => {
       {/* Arrows */}
       <button
         onClick={goPrev}
-        className="absolute right-20 md:right-24 bottom-6 z-20 bg-[#f7efe2]/90 hover:bg-[#f7efe2] text-[#7a1d2c] rounded-full p-2.5 shadow-md transition"
+        className="absolute right-20 md:right-24 bottom-6 z-20 bg-[#f7efe2]/90 hover:bg-[#f7efe2] text-brand rounded-full p-2.5 shadow-md transition"
         aria-label="Previous slide"
       >
         <ChevronLeft size={20} />
       </button>
       <button
         onClick={goNext}
-        className="absolute right-6 bottom-6 z-20 bg-[#f7efe2]/90 hover:bg-[#f7efe2] text-[#7a1d2c] rounded-full p-2.5 shadow-md transition"
+        className="absolute right-6 bottom-6 z-20 bg-[#f7efe2]/90 hover:bg-[#f7efe2] text-brand rounded-full p-2.5 shadow-md transition"
         aria-label="Next slide"
       >
         <ChevronRight size={20} />

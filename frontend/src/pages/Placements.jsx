@@ -20,10 +20,10 @@ const Placements = () => {
             [Briefcase, "Average Package", "₹ 4.8 LPA", "All eligible students"],
             [Users, "Recruiters", "60+", "Across IT, core engineering and PSUs"],
           ].map(([Icon, k, v, sub]) => (
-            <div key={k} className="bg-white p-6 border border-[#7a1d2c]/15 card-hover">
-              <Icon size={22} className="text-[#7a1d2c]" />
+            <div key={k} className="bg-white p-6 border border-brand/15 card-hover">
+              <Icon size={22} className="text-brand" />
               <p className="text-xs uppercase tracking-widest text-[#3a3a3a]/85 mt-2">{k}</p>
-              <p className="text-3xl text-[#7a1d2c] font-semibold mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{v}</p>
+              <p className="text-3xl text-brand font-semibold mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{v}</p>
               <p className="text-xs text-[#3a3a3a]/70 mt-1">{sub}</p>
             </div>
           ))}
@@ -32,10 +32,10 @@ const Placements = () => {
 
       <section id="recruiters" className="bg-[#f1e6d2]/60 py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Top Recruiters</h2>
-          <div className="bg-white border border-[#7a1d2c]/15">
+          <h2 className="text-3xl md:text-4xl text-brand mb-8 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Top Recruiters</h2>
+          <div className="bg-white border border-brand/15">
             <table className="w-full text-sm">
-              <thead className="bg-[#7a1d2c] text-[#f7efe2]">
+              <thead className="bg-brand text-[#f7efe2]">
                 <tr>
                   <th className="text-left p-3">Company</th>
                   <th className="text-left p-3">Offers (2025-26)</th>
@@ -45,9 +45,9 @@ const Placements = () => {
               <tbody>
                 {placements.map((p) => (
                   <tr key={p.company} className="odd:bg-[#f7efe2]/40">
-                    <td className="p-3 border-t border-[#7a1d2c]/10 font-semibold text-[#7a1d2c]">{p.company}</td>
-                    <td className="p-3 border-t border-[#7a1d2c]/10">{p.offers}</td>
-                    <td className="p-3 border-t border-[#7a1d2c]/10 italic">{p.role}</td>
+                    <td className="p-3 border-t border-brand/10 font-semibold text-brand">{p.company}</td>
+                    <td className="p-3 border-t border-brand/10">{p.offers}</td>
+                    <td className="p-3 border-t border-brand/10 italic">{p.role}</td>
                   </tr>
                 ))}
               </tbody>
@@ -57,7 +57,7 @@ const Placements = () => {
       </section>
 
       <section id="training" className="max-w-7xl mx-auto px-6 lg:px-10 py-14">
-        <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Training & Skill Development</h2>
+        <h2 className="text-3xl md:text-4xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Training & Skill Development</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
             ["Aptitude & Reasoning", "Quantitative aptitude, logical reasoning and verbal ability training across all 8 semesters."],
@@ -67,8 +67,8 @@ const Placements = () => {
             ["Mock Drives", "Weekly mock placement drives in collaboration with sister KLS institutions."],
             ["Higher Education Cell", "GRE / TOEFL / GATE / CAT mentorship for students aspiring to higher studies."],
           ].map(([t, d]) => (
-            <div key={t} className="bg-white p-5 border-l-4 border-[#7a1d2c]">
-              <h3 className="text-[#7a1d2c] font-semibold">{t}</h3>
+            <div key={t} className="bg-white p-5 border-l-4 border-brand">
+              <h3 className="text-brand font-semibold">{t}</h3>
               <p className="text-sm text-[#3a3a3a]/85 mt-1">{d}</p>
             </div>
           ))}

@@ -24,8 +24,8 @@ const StudentClubs = () => {
               onClick={() => setCat(c)}
               className={`px-4 py-2 text-xs rounded-full font-sans-ui font-semibold tracking-wider ${
                 cat === c
-                  ? "bg-[#7a1d2c] text-[#f7efe2]"
-                  : "bg-white text-[#7a1d2c] border border-[#7a1d2c]/30 hover:bg-[#7a1d2c]/10"
+                  ? "bg-brand text-[#f7efe2]"
+                  : "bg-white text-brand border border-brand/30 hover:bg-brand/10"
               }`}
             >
               {c.toUpperCase()}
@@ -36,20 +36,20 @@ const StudentClubs = () => {
           {list.map((club) => {
             const dept = club.deptId ? findDept(club.deptId) : null;
             return (
-              <article key={club.id} className="bg-white border border-[#7a1d2c]/15 overflow-hidden card-hover">
+              <article key={club.id} className="bg-white border border-brand/15 overflow-hidden card-hover">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img src={club.image} alt={club.name} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-5">
-                  <span className="text-xs text-[#7a1d2c] tracking-widest font-sans-ui">{club.category.toUpperCase()}</span>
-                  <h3 className="text-[#7a1d2c] text-xl font-semibold mt-1 leading-snug" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <span className="text-xs text-brand tracking-widest font-sans-ui">{club.category.toUpperCase()}</span>
+                  <h3 className="text-brand text-xl font-semibold mt-1 leading-snug" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                     {club.name}
                   </h3>
                   <p className="text-sm text-[#3a3a3a]/85 mt-2 leading-relaxed">{club.description}</p>
                   <div className="mt-4 flex items-center justify-between text-xs">
                     <p className="text-[#3a3a3a] italic">Faculty Advisor: {club.advisor}</p>
                     {dept && (
-                      <Link to={`/programme/${dept.id}`} className="text-[#7a1d2c] hover:underline">
+                      <Link to={`/programme/${dept.id}`} className="text-brand hover:underline">
                         {dept.short}
                       </Link>
                     )}

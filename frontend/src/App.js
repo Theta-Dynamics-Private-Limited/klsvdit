@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import { ThemeProvider } from "./context/ThemeContext";
 import AnnouncementBar from "./components/AnnouncementBar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -47,7 +48,7 @@ import StudentClubs from "./pages/StudentClubs";
 const Forum = () => (
   <main className="max-w-5xl mx-auto px-6 lg:px-10 py-24 min-h-[60vh]">
     <h1
-      className="text-4xl md:text-5xl text-[#7a1d2c] font-semibold mb-4"
+      className="text-4xl md:text-5xl text-brand font-semibold mb-4"
       style={{ fontFamily: "'Cormorant Garamond', serif" }}
     >
       VDIT Forum
@@ -62,8 +63,9 @@ const Forum = () => (
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <ThemeProvider>
+      <div className="App">
+        <BrowserRouter>
         <ScrollToTop />
         <AnnouncementBar />
         <Header />
@@ -109,8 +111,9 @@ function App() {
         </Routes>
         <Footer />
         <FloatingApply />
-      </BrowserRouter>
-    </div>
+        </BrowserRouter>
+      </div>
+    </ThemeProvider>
   );
 }
 

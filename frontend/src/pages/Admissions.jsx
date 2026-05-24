@@ -43,7 +43,7 @@ const Admissions = () => {
 
       <section id="apply" className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid lg:grid-cols-2 gap-12">
         <div>
-          <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-4 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <h2 className="text-3xl md:text-4xl text-brand mb-4 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             How to Apply
           </h2>
           <p className="text-[#2a2a2a]/85 leading-relaxed mb-6">
@@ -60,7 +60,7 @@ const Admissions = () => {
               "Report at VDIT with original documents and complete enrolment",
             ].map((step, i) => (
               <li key={i} className="flex gap-3 items-start">
-                <span className="w-7 h-7 rounded-full bg-[#7a1d2c] text-[#f7efe2] text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-sans-ui font-semibold">
+                <span className="w-7 h-7 rounded-full bg-brand text-[#f7efe2] text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-sans-ui font-semibold">
                   {i + 1}
                 </span>
                 <span className="text-[15px] text-[#2a2a2a]">{step}</span>
@@ -69,29 +69,29 @@ const Admissions = () => {
           </ol>
         </div>
 
-        <div className="bg-white p-6 md:p-8 border border-[#7a1d2c]/15 shadow-sm">
-          <h3 className="text-2xl text-[#7a1d2c] mb-1 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Admission Enquiry 2026-27</h3>
+        <div className="bg-white p-6 md:p-8 border border-brand/15 shadow-sm">
+          <h3 className="text-2xl text-brand mb-1 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Admission Enquiry 2026-27</h3>
           <p className="text-sm text-[#3a3a3a]/80 mb-5">Fill in your details and our team will get in touch.</p>
 
           {submitted ? (
             <div className="py-10 text-center">
-              <div className="w-14 h-14 rounded-full bg-[#7a1d2c] mx-auto flex items-center justify-center text-[#f7efe2] mb-4">
+              <div className="w-14 h-14 rounded-full bg-brand mx-auto flex items-center justify-center text-[#f7efe2] mb-4">
                 <Check size={28} />
               </div>
-              <p className="text-[#7a1d2c] font-semibold text-xl mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Thank you!</p>
+              <p className="text-brand font-semibold text-xl mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Thank you!</p>
               <p className="text-[#3a3a3a]/85 text-sm">Your enquiry has been recorded. Our admissions team will reach out shortly.</p>
-              <button onClick={() => { setSubmitted(false); setForm({ firstName: "", lastName: "", city: "", email: "", phone: "", source: "", courses: [] }); }} className="mt-5 text-[#7a1d2c] underline text-sm">Submit another enquiry</button>
+              <button onClick={() => { setSubmitted(false); setForm({ firstName: "", lastName: "", city: "", email: "", phone: "", source: "", courses: [] }); }} className="mt-5 text-brand underline text-sm">Submit another enquiry</button>
             </div>
           ) : (
             <form onSubmit={submit} className="space-y-3 font-sans-ui">
               <div className="grid grid-cols-2 gap-3">
-                <input required value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} placeholder="First Name *" className="px-3 py-2.5 border border-[#7a1d2c]/30 text-sm focus:outline-none focus:ring-2 focus:ring-[#7a1d2c]/40 rounded" />
-                <input required value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} placeholder="Last Name *" className="px-3 py-2.5 border border-[#7a1d2c]/30 text-sm focus:outline-none focus:ring-2 focus:ring-[#7a1d2c]/40 rounded" />
+                <input required value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} placeholder="First Name *" className="px-3 py-2.5 border border-brand/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 rounded" />
+                <input required value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} placeholder="Last Name *" className="px-3 py-2.5 border border-brand/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 rounded" />
               </div>
-              <input required value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} placeholder="City *" className="w-full px-3 py-2.5 border border-[#7a1d2c]/30 text-sm focus:outline-none focus:ring-2 focus:ring-[#7a1d2c]/40 rounded" />
-              <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email *" className="w-full px-3 py-2.5 border border-[#7a1d2c]/30 text-sm focus:outline-none focus:ring-2 focus:ring-[#7a1d2c]/40 rounded" />
-              <input required value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Phone Number *" className="w-full px-3 py-2.5 border border-[#7a1d2c]/30 text-sm focus:outline-none focus:ring-2 focus:ring-[#7a1d2c]/40 rounded" />
-              <select required value={form.source} onChange={(e) => setForm({ ...form, source: e.target.value })} className="w-full px-3 py-2.5 border border-[#7a1d2c]/30 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#7a1d2c]/40 rounded">
+              <input required value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} placeholder="City *" className="w-full px-3 py-2.5 border border-brand/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 rounded" />
+              <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email *" className="w-full px-3 py-2.5 border border-brand/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 rounded" />
+              <input required value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Phone Number *" className="w-full px-3 py-2.5 border border-brand/30 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 rounded" />
+              <select required value={form.source} onChange={(e) => setForm({ ...form, source: e.target.value })} className="w-full px-3 py-2.5 border border-brand/30 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand/40 rounded">
                 <option value="">How did you hear about us? *</option>
                 <option>Friends &amp; Family</option>
                 <option>Web Search</option>
@@ -104,13 +104,13 @@ const Admissions = () => {
                 <div className="space-y-2">
                   {departments.map((d) => (
                     <label key={d.id} className="flex items-center gap-2 text-sm cursor-pointer">
-                      <input type="checkbox" checked={form.courses.includes(d.id)} onChange={() => toggleCourse(d.id)} className="w-4 h-4 accent-[#7a1d2c]" />
+                      <input type="checkbox" checked={form.courses.includes(d.id)} onChange={() => toggleCourse(d.id)} className="w-4 h-4 accent-brand" />
                       <span>{d.name}</span>
                     </label>
                   ))}
                 </div>
               </div>
-              <button type="submit" className="w-full bg-[#7a1d2c] text-[#f7efe2] py-3 text-sm font-semibold hover:bg-[#5b1421] transition flex items-center justify-center gap-2 rounded">
+              <button type="submit" className="w-full bg-brand text-[#f7efe2] py-3 text-sm font-semibold hover:bg-brand-dark transition flex items-center justify-center gap-2 rounded">
                 Enquire <ArrowRight size={16} />
               </button>
             </form>
@@ -120,7 +120,7 @@ const Admissions = () => {
 
       <section id="eligibility" className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl text-[#7a1d2c] mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Eligibility</h2>
+          <h2 className="text-3xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Eligibility</h2>
           <ul className="space-y-3 text-[15px] text-[#2a2a2a]/85">
             <li>• <strong>B.E. (4 years):</strong> Pass in PUC II / 10+2 with Physics, Mathematics and one of Chemistry/Biology/Computer Science with at least 45% (40% for reserved categories) and a valid KCET / COMEDK rank.</li>
             <li>• <strong>M.Tech (2 years):</strong> A B.E./B.Tech in the relevant branch with first class and a valid PGCET / GATE score.</li>
@@ -130,10 +130,10 @@ const Admissions = () => {
       </section>
 
       <section id="fees" className="max-w-5xl mx-auto px-6 lg:px-10 py-16">
-        <h2 className="text-3xl text-[#7a1d2c] mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Fee Structure (Indicative)</h2>
-        <div className="overflow-x-auto bg-white border border-[#7a1d2c]/15">
+        <h2 className="text-3xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Fee Structure (Indicative)</h2>
+        <div className="overflow-x-auto bg-white border border-brand/15">
           <table className="w-full text-sm">
-            <thead className="bg-[#7a1d2c] text-[#f7efe2]">
+            <thead className="bg-brand text-[#f7efe2]">
               <tr>
                 <th className="text-left p-3">Programme</th>
                 <th className="text-left p-3">CET / Govt. Quota</th>
@@ -150,7 +150,7 @@ const Admissions = () => {
               ].map((row) => (
                 <tr key={row[0]} className="odd:bg-[#f7efe2]/40">
                   {row.map((c, i) => (
-                    <td key={i} className="p-3 border-t border-[#7a1d2c]/10">{c}</td>
+                    <td key={i} className="p-3 border-t border-brand/10">{c}</td>
                   ))}
                 </tr>
               ))}
@@ -162,7 +162,7 @@ const Admissions = () => {
 
       <section id="scholarships" className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <h2 className="text-3xl text-[#7a1d2c] mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Scholarships</h2>
+          <h2 className="text-3xl text-brand mb-6 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Scholarships</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               ["Merit Scholarships", "Awarded to top KCET / COMEDK rankers and toppers of every semester at VDIT."],
@@ -170,8 +170,8 @@ const Admissions = () => {
               ["VDIT Need-based Aid", "Financial assistance for academically promising students from economically weaker sections."],
               ["AICTE Pragati / Saksham", "Centrally sponsored schemes for girl students and differently-abled students."],
             ].map(([t, d]) => (
-              <div key={t} className="bg-white p-5 border-l-4 border-[#7a1d2c]">
-                <h3 className="text-[#7a1d2c] font-semibold text-lg">{t}</h3>
+              <div key={t} className="bg-white p-5 border-l-4 border-brand">
+                <h3 className="text-brand font-semibold text-lg">{t}</h3>
                 <p className="text-[#3a3a3a]/85 text-sm mt-1">{d}</p>
               </div>
             ))}

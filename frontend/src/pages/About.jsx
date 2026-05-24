@@ -10,7 +10,7 @@ const PageHero = ({ title, sub, image }) => (
       alt=""
       className="w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-[#5b1421]/85 via-[#5b1421]/55 to-[#5b1421]/15" />
+    <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/85 via-brand-dark/55 to-brand-dark/15" />
     <div className="absolute inset-0 flex items-end pb-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
         <p className="text-[#f7efe2]/85 text-xs md:text-sm tracking-[0.25em] font-sans-ui mb-2">
@@ -41,7 +41,7 @@ const About = () => {
 
       <section id="kls" className="max-w-5xl mx-auto px-6 lg:px-10 py-16">
         <h2
-          className="text-3xl md:text-4xl text-[#7a1d2c] mb-6 font-semibold"
+          className="text-3xl md:text-4xl text-brand mb-6 font-semibold"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           About KLS
@@ -69,14 +69,14 @@ const About = () => {
       <section id="history" className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <h2
-            className="text-3xl md:text-4xl text-[#7a1d2c] mb-6 font-semibold"
+            className="text-3xl md:text-4xl text-brand mb-6 font-semibold"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Our History
           </h2>
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-2/5">
-              <div className="text-7xl md:text-8xl text-[#7a1d2c] font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>2004</div>
+              <div className="text-7xl md:text-8xl text-brand font-semibold leading-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>2004</div>
               <p className="text-[#3a3a3a] italic mt-1">Year of establishment</p>
             </div>
             <div className="md:w-3/5 space-y-4 text-[#2a2a2a]/90 leading-relaxed text-[15.5px]">
@@ -104,7 +104,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h2
-              className="text-3xl text-[#7a1d2c] mb-4 font-semibold"
+              className="text-3xl text-brand mb-4 font-semibold"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Vision
@@ -116,7 +116,7 @@ const About = () => {
           </div>
           <div>
             <h2
-              className="text-3xl text-[#7a1d2c] mb-4 font-semibold"
+              className="text-3xl text-brand mb-4 font-semibold"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Mission
@@ -135,7 +135,7 @@ const About = () => {
       <section className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2
-            className="text-3xl md:text-4xl text-[#7a1d2c] mb-10 font-semibold"
+            className="text-3xl md:text-4xl text-brand mb-10 font-semibold"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Key Facts about VDIT
@@ -152,7 +152,7 @@ const About = () => {
               ["Non-teaching staff", "150+"],
             ].map(([label, value]) => (
               <div key={label}>
-                <div className="text-5xl md:text-6xl text-[#7a1d2c] font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <div className="text-5xl md:text-6xl text-brand font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   {value}
                 </div>
                 <p className="text-[#3a3a3a]/85 text-sm mt-2">{label}</p>
@@ -164,18 +164,18 @@ const About = () => {
 
       <section id="leadership" className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <h2
-          className="text-3xl md:text-4xl text-[#7a1d2c] mb-10 font-semibold"
+          className="text-3xl md:text-4xl text-brand mb-10 font-semibold"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           Meet our leaders
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {leaders.map((l) => (
-            <div key={l.id} className="text-center bg-white p-6 border border-[#7a1d2c]/10">
+            <div key={l.id} className="text-center bg-white p-6 border border-brand/10">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <img src={l.image} alt={l.name} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl text-[#7a1d2c] font-semibold">{l.name}</h3>
+              <h3 className="text-xl text-brand font-semibold">{l.name}</h3>
               <p className="text-[#3a3a3a] italic text-sm mt-1">{l.role}</p>
             </div>
           ))}
@@ -184,14 +184,14 @@ const About = () => {
 
       <section id="alumni" className="bg-[#f1e6d2]/60 py-16">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
-          <h2 className="text-3xl md:text-4xl text-[#7a1d2c] mb-4 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Alumni Network</h2>
+          <h2 className="text-3xl md:text-4xl text-brand mb-4 font-semibold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Alumni Network</h2>
           <p className="text-[#2a2a2a]/90 leading-relaxed text-[15.5px]">
             Over 7,700 alumni of VDIT serve in industry, academia, public service
             and entrepreneurship across India and abroad. The VDIT Alumni
             Association connects current students with mentors, internships and
             career opportunities.
           </p>
-          <Link to="/admissions" className="inline-flex items-center gap-2 mt-6 bg-[#7a1d2c] text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-[#5b1421] transition">
+          <Link to="/admissions" className="inline-flex items-center gap-2 mt-6 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition">
             Join the network <ArrowRight size={16} />
           </Link>
         </div>

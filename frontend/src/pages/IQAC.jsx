@@ -32,18 +32,18 @@ const IQAC = () => (
         [Target, "AQAR", "Annual Quality Assurance Reports submitted regularly to NAAC."],
         [BookOpen, "OBE Framework", "All programmes designed under VTU's Outcome Based Education framework."],
       ].map(([Icon, t, d]) => (
-        <div key={t} className="bg-white p-5 border border-[#7a1d2c]/15 card-hover">
-          <Icon size={22} className="text-[#7a1d2c] mb-2" />
-          <h3 className="text-[#7a1d2c] font-semibold">{t}</h3>
+        <div key={t} className="bg-white p-5 border border-brand/15 card-hover">
+          <Icon size={22} className="text-brand mb-2" />
+          <h3 className="text-brand font-semibold">{t}</h3>
           <p className="text-sm text-[#3a3a3a]/85 mt-1">{d}</p>
         </div>
       ))}
     </div>
 
-    <h3 className="text-2xl text-[#7a1d2c] font-semibold mt-10 mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>IQAC Composition</h3>
-    <div className="bg-white border border-[#7a1d2c]/15">
+    <h3 className="text-2xl text-brand font-semibold mt-10 mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>IQAC Composition</h3>
+    <div className="bg-white border border-brand/15">
       <table className="w-full text-sm">
-        <thead className="bg-[#7a1d2c] text-[#f7efe2]">
+        <thead className="bg-brand text-[#f7efe2]">
           <tr><th className="text-left p-3">Member</th><th className="text-left p-3">Designation</th></tr>
         </thead>
         <tbody>
@@ -58,8 +58,8 @@ const IQAC = () => (
             ["Student Representative", "VDIT Student Council"],
           ].map(([n, r], i) => (
             <tr key={n + i} className="odd:bg-[#f7efe2]/40">
-              <td className="p-3 border-t border-[#7a1d2c]/10">{n}</td>
-              <td className="p-3 border-t border-[#7a1d2c]/10 italic">{r}</td>
+              <td className="p-3 border-t border-brand/10">{n}</td>
+              <td className="p-3 border-t border-brand/10 italic">{r}</td>
             </tr>
           ))}
         </tbody>

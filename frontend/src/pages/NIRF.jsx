@@ -24,10 +24,10 @@ const NIRF = () => (
         ["Perception", "10 / 100"],
         ["Total Score (Engineering 2025)", "100"],
       ].map(([k, v]) => (
-        <div key={k} className="bg-white p-5 border border-[#7a1d2c]/15 card-hover">
-          <Award size={20} className="text-[#7a1d2c] mb-2" />
+        <div key={k} className="bg-white p-5 border border-brand/15 card-hover">
+          <Award size={20} className="text-brand mb-2" />
           <p className="text-xs text-[#3a3a3a]/70 uppercase tracking-widest">{k}</p>
-          <p className="text-2xl text-[#7a1d2c] font-semibold mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{v}</p>
+          <p className="text-2xl text-brand font-semibold mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{v}</p>
         </div>
       ))}
     </div>

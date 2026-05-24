@@ -8,7 +8,7 @@ import { useState } from "react";
 const SectionTitle = ({ children, sub }) => (
   <div className="mb-10">
     <h2
-      className="text-4xl md:text-5xl text-[#7a1d2c] font-semibold"
+      className="text-4xl md:text-5xl text-brand font-semibold"
       style={{ fontFamily: "'Cormorant Garamond', serif" }}
     >
       {children}
@@ -36,7 +36,7 @@ const Home = () => {
             <Link
               to={`/news/${item.id}`}
               key={item.id}
-              className="bg-white card-hover overflow-hidden border border-[#7a1d2c]/10 block"
+              className="bg-white card-hover overflow-hidden border border-brand/10 block"
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
@@ -47,16 +47,16 @@ const Home = () => {
                 />
               </div>
               <div className="p-6">
-                <span className="text-xs text-[#7a1d2c] font-sans-ui tracking-wider">
+                <span className="text-xs text-brand font-sans-ui tracking-wider">
                   {item.date}
                 </span>
-                <h3 className="text-[#7a1d2c] text-xl mt-2 font-semibold leading-snug">
+                <h3 className="text-brand text-xl mt-2 font-semibold leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-[#3a3a3a]/85 text-sm mt-3 leading-relaxed line-clamp-3">
                   {item.description}
                 </p>
-                <span className="text-xs text-[#7a1d2c] underline mt-3 inline-block">
+                <span className="text-xs text-brand underline mt-3 inline-block">
                   Read more →
                 </span>
               </div>
@@ -66,7 +66,7 @@ const Home = () => {
         <div className="mt-10 text-center">
           <Link
             to="/news-events"
-            className="inline-flex items-center gap-2 bg-[#7a1d2c] text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-[#5b1421] transition"
+            className="inline-flex items-center gap-2 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
           >
             More News <ArrowRight size={16} />
           </Link>
@@ -82,9 +82,9 @@ const Home = () => {
               <Link
                 to={`/event/${ev.id}`}
                 key={ev.id}
-                className="border-l-4 border-[#7a1d2c] bg-white p-5 card-hover block"
+                className="border-l-4 border-brand bg-white p-5 card-hover block"
               >
-                <div className="flex items-center gap-2 text-[#7a1d2c] text-xs font-sans-ui tracking-wider mb-2">
+                <div className="flex items-center gap-2 text-brand text-xs font-sans-ui tracking-wider mb-2">
                   <Calendar size={14} />
                   {ev.date} · {ev.time}
                 </div>
@@ -97,7 +97,7 @@ const Home = () => {
           <div className="mt-10 text-center">
             <Link
               to="/news-events"
-              className="inline-flex items-center gap-2 bg-[#7a1d2c] text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-[#5b1421] transition"
+              className="inline-flex items-center gap-2 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
             >
               More Events <ArrowRight size={16} />
             </Link>
@@ -130,7 +130,7 @@ const Home = () => {
           </SectionTitle>
           <div className="grid md:grid-cols-2 gap-10">
             <div>
-              <h3 className="text-2xl text-[#7a1d2c] font-semibold mb-3">
+              <h3 className="text-2xl text-brand font-semibold mb-3">
                 Undergraduate Programmes
               </h3>
               <p className="text-[#3a3a3a]/85 leading-relaxed">
@@ -138,7 +138,7 @@ const Home = () => {
                 and core disciplines, including the new{" "}
                 <Link
                   to="/academics#cse-aiml"
-                  className="text-[#7a1d2c] underline"
+                  className="text-brand underline"
                 >
                   B.E. in CSE (AI &amp; ML)
                 </Link>
@@ -147,14 +147,14 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-2xl text-[#7a1d2c] font-semibold mb-3">
+              <h3 className="text-2xl text-brand font-semibold mb-3">
                 Postgraduate Programmes
               </h3>
               <p className="text-[#3a3a3a]/85 leading-relaxed">
                 Our postgraduate offerings include the{" "}
-                <span className="text-[#7a1d2c]">M.Tech in Digital Electronics</span>{" "}
+                <span className="text-brand">M.Tech in Digital Electronics</span>{" "}
                 and{" "}
-                <span className="text-[#7a1d2c]">
+                <span className="text-brand">
                   M.Tech in Computer Science
                 </span>
                 . These two-year programmes provide depth in research methodology
@@ -163,7 +163,7 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-2xl text-[#7a1d2c] font-semibold mb-3">
+              <h3 className="text-2xl text-brand font-semibold mb-3">
                 Research &amp; Doctoral
               </h3>
               <p className="text-[#3a3a3a]/85 leading-relaxed">
@@ -174,7 +174,7 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-2xl text-[#7a1d2c] font-semibold mb-3">
+              <h3 className="text-2xl text-brand font-semibold mb-3">
                 Continuing Education
               </h3>
               <p className="text-[#3a3a3a]/85 leading-relaxed">
@@ -187,7 +187,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/academics"
-              className="inline-flex items-center gap-2 bg-[#7a1d2c] text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-[#5b1421] transition"
+              className="inline-flex items-center gap-2 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition"
             >
               Know More <ArrowRight size={16} />
             </Link>
@@ -213,7 +213,7 @@ const Home = () => {
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#5b1421]/90 via-[#5b1421]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="text-[#f7efe2]/85 text-xs tracking-widest font-sans-ui">
                   {d.short}
@@ -237,7 +237,7 @@ const Home = () => {
             <button
               onClick={prev}
               disabled={leaderIdx === 0}
-              className="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-[#7a1d2c] text-[#f7efe2] rounded-full p-2 disabled:opacity-30 hover:bg-[#5b1421]"
+              className="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-brand text-[#f7efe2] rounded-full p-2 disabled:opacity-30 hover:bg-brand-dark"
               aria-label="Previous"
             >
               <ChevronLeft size={22} />
@@ -245,7 +245,7 @@ const Home = () => {
             <button
               onClick={next}
               disabled={leaderIdx === maxIdx}
-              className="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-[#7a1d2c] text-[#f7efe2] rounded-full p-2 disabled:opacity-30 hover:bg-[#5b1421]"
+              className="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-brand text-[#f7efe2] rounded-full p-2 disabled:opacity-30 hover:bg-brand-dark"
               aria-label="Next"
             >
               <ChevronRight size={22} />
@@ -256,7 +256,7 @@ const Home = () => {
                 .map((l) => (
                   <div
                     key={l.id}
-                    className="bg-white p-6 md:p-8 flex flex-col md:flex-row gap-6 border border-[#7a1d2c]/10"
+                    className="bg-white p-6 md:p-8 flex flex-col md:flex-row gap-6 border border-brand/10"
                   >
                     <div className="w-32 h-32 md:w-40 md:h-44 flex-shrink-0 overflow-hidden">
                       <img
@@ -270,7 +270,7 @@ const Home = () => {
                         {l.bio}
                       </p>
                       <div className="mt-4">
-                        <h3 className="text-[#7a1d2c] text-xl font-semibold">
+                        <h3 className="text-brand text-xl font-semibold">
                           {l.name}
                         </h3>
                         <p className="text-[#3a3a3a] text-sm italic">
@@ -286,8 +286,8 @@ const Home = () => {
                 <button
                   key={i}
                   onClick={() => setLeaderIdx(i)}
-                  className={`w-3 h-3 rounded-full border border-[#7a1d2c] ${
-                    i === leaderIdx ? "bg-[#7a1d2c]" : "bg-transparent"
+                  className={`w-3 h-3 rounded-full border border-brand ${
+                    i === leaderIdx ? "bg-brand" : "bg-transparent"
                   }`}
                   aria-label={`Page ${i + 1}`}
                 />
@@ -336,7 +336,7 @@ const Stat = ({ label, value, highlight, small }) => (
       className={`${
         small ? "text-2xl" : "text-5xl md:text-6xl"
       } font-semibold leading-none ${
-        highlight ? "text-[#7a1d2c]" : "text-[#1a1a1a]"
+        highlight ? "text-brand" : "text-[#1a1a1a]"
       }`}
       style={{ fontFamily: "'Cormorant Garamond', serif" }}
     >
@@ -356,7 +356,7 @@ const ExploreTile = ({ label, to, image }) => (
       loading="lazy"
       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
     />
-    <div className="absolute inset-0 bg-[#5b1421]/40 group-hover:bg-[#5b1421]/60 transition" />
+    <div className="absolute inset-0 bg-brand-dark/40 group-hover:bg-brand-dark/60 transition" />
     <div className="absolute inset-0 flex items-center justify-center">
       <span
         className="text-[#f7efe2] text-xl md:text-2xl font-semibold tracking-wide flex items-center gap-2"

@@ -17,13 +17,13 @@ const PrincipalsMessage = () => (
           />
         </div>
         <div className="mt-3">
-          <p className="text-[#7a1d2c] font-semibold text-lg">Dr. V. A. Kulkarni</p>
+          <p className="text-brand font-semibold text-lg">Dr. V. A. Kulkarni</p>
           <p className="text-[#3a3a3a] italic text-sm">Principal, KLS VDIT</p>
           <p className="text-[#3a3a3a]/70 text-xs mt-1">Ph.D. (Mech. Engg.), F.I.E.</p>
         </div>
       </div>
       <div className="flex-1 vdit-prose">
-        <p className="text-xl italic text-[#7a1d2c]">
+        <p className="text-xl italic text-brand">
           “Knowledge is power. At VDIT, we strive to make this knowledge
           accessible, applicable, and transformative for every student who
           walks through our gates.”

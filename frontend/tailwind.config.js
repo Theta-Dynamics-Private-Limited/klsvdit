@@ -52,6 +52,11 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
+  			},
+  			brand: {
+  				DEFAULT: 'rgb(var(--brand) / <alpha-value>)',
+  				dark: 'rgb(var(--brand-dark) / <alpha-value>)',
+  				darker: 'rgb(var(--brand-darker) / <alpha-value>)'
   			}
   		},
   		keyframes: {

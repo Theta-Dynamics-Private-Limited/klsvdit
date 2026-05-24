@@ -47,15 +47,15 @@ const People = () => {
       image="https://images.pexels.com/photos/8423416/pexels-photo-8423416.jpeg?w=2400"
       breadcrumbs={[{ label: "About", to: "/about" }, { label: "People @ VDIT" }]}
     >
-      <div className="flex border-b border-[#7a1d2c]/20 mb-8 font-sans-ui overflow-x-auto">
+      <div className="flex border-b border-brand/20 mb-8 font-sans-ui overflow-x-auto">
         {tabs.map((t) => (
           <button
             key={t.id}
             onClick={() => setActive(t.id)}
             className={`px-5 py-3 text-sm font-semibold tracking-widest whitespace-nowrap transition-colors ${
               tab === t.id
-                ? "text-[#7a1d2c] border-b-2 border-[#7a1d2c]"
-                : "text-[#3a3a3a] hover:text-[#7a1d2c]"
+                ? "text-brand border-b-2 border-brand"
+                : "text-[#3a3a3a] hover:text-brand"
             }`}
           >
             {t.label.toUpperCase()}
@@ -70,8 +70,8 @@ const People = () => {
               onClick={() => setDeptFilter("all")}
               className={`px-3 py-1.5 text-xs rounded-full font-sans-ui ${
                 dept === "all"
-                  ? "bg-[#7a1d2c] text-[#f7efe2]"
-                  : "bg-white text-[#7a1d2c] border border-[#7a1d2c]/30"
+                  ? "bg-brand text-[#f7efe2]"
+                  : "bg-white text-brand border border-brand/30"
               }`}
             >
               All
@@ -82,8 +82,8 @@ const People = () => {
                 onClick={() => setDeptFilter(d.short)}
                 className={`px-3 py-1.5 text-xs rounded-full font-sans-ui ${
                   dept === d.short
-                    ? "bg-[#7a1d2c] text-[#f7efe2]"
-                    : "bg-white text-[#7a1d2c] border border-[#7a1d2c]/30"
+                    ? "bg-brand text-[#f7efe2]"
+                    : "bg-white text-brand border border-brand/30"
                 }`}
               >
                 {d.short}
@@ -97,7 +97,7 @@ const People = () => {
                 <Link
                   to={`/faculty/${f.id}`}
                   key={f.id}
-                  className="bg-white border border-[#7a1d2c]/15 overflow-hidden card-hover block"
+                  className="bg-white border border-brand/15 overflow-hidden card-hover block"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
@@ -108,7 +108,7 @@ const People = () => {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-[#7a1d2c] font-semibold text-lg leading-snug">
+                    <h3 className="text-brand font-semibold text-lg leading-snug">
                       {f.name}
                     </h3>
                     <p className="italic text-sm text-[#3a3a3a]">
@@ -123,7 +123,7 @@ const People = () => {
                     <p className="mt-2 text-sm text-[#3a3a3a]/85 leading-relaxed line-clamp-3">
                       {f.bio}
                     </p>
-                    <span className="text-xs text-[#7a1d2c] underline mt-2 inline-block">
+                    <span className="text-xs text-brand underline mt-2 inline-block">
                       View profile →
                     </span>
                   </div>
@@ -135,9 +135,9 @@ const People = () => {
       )}
 
       {tab === "admin" && (
-        <div className="bg-white border border-[#7a1d2c]/15">
+        <div className="bg-white border border-brand/15">
           <table className="w-full text-sm">
-            <thead className="bg-[#7a1d2c] text-[#f7efe2]">
+            <thead className="bg-brand text-[#f7efe2]">
               <tr>
                 <th className="text-left p-3">Name</th>
                 <th className="text-left p-3">Role</th>
@@ -146,8 +146,8 @@ const People = () => {
             <tbody>
               {adminStaff.map((a) => (
                 <tr key={a.id} className="odd:bg-[#f7efe2]/40">
-                  <td className="p-3 border-t border-[#7a1d2c]/10">{a.name}</td>
-                  <td className="p-3 border-t border-[#7a1d2c]/10 italic">{a.role}</td>
+                  <td className="p-3 border-t border-brand/10">{a.name}</td>
+                  <td className="p-3 border-t border-brand/10 italic">{a.role}</td>
                 </tr>
               ))}
             </tbody>
@@ -160,14 +160,14 @@ const People = () => {
           {researchers.map((r) => {
             const d = findDept(r.deptId);
             return (
-              <div key={r.id} className="bg-white p-5 border-l-4 border-[#7a1d2c]">
-                <h3 className="text-[#7a1d2c] font-semibold">{r.name}</h3>
+              <div key={r.id} className="bg-white p-5 border-l-4 border-brand">
+                <h3 className="text-brand font-semibold">{r.name}</h3>
                 <p className="text-sm italic text-[#3a3a3a]">
                   {r.role}
                   {d && (
                     <>
                       <span className="mx-1">·</span>
-                      <Link to={`/programme/${d.id}`} className="hover:underline text-[#7a1d2c]">
+                      <Link to={`/programme/${d.id}`} className="hover:underline text-brand">
                         {d.short}
                       </Link>
                     </>
@@ -181,7 +181,7 @@ const People = () => {
       )}
 
       {tab === "fellows" && (
-        <div className="bg-white p-8 border border-[#7a1d2c]/15 text-center">
+        <div className="bg-white p-8 border border-brand/15 text-center">
           <p className="text-[#3a3a3a]/85">
             VDIT does not currently host external visiting fellows. The institute
             periodically invites distinguished speakers and short-term visitors

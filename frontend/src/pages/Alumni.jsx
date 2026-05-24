@@ -18,15 +18,15 @@ const Alumni = () => (
           [Award, "Distinguished Alumni", "160+"],
           [MessageSquare, "Mentorship Pool", "450 active"],
         ].map(([Icon, k, v]) => (
-          <div key={k} className="bg-white p-5 border border-[#7a1d2c]/15">
-            <Icon size={22} className="text-[#7a1d2c]" />
+          <div key={k} className="bg-white p-5 border border-brand/15">
+            <Icon size={22} className="text-brand" />
             <p className="text-xs uppercase tracking-widest text-[#3a3a3a]/85 mt-2">{k}</p>
-            <p className="text-3xl text-[#7a1d2c] font-semibold mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{v}</p>
+            <p className="text-3xl text-brand font-semibold mt-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{v}</p>
           </div>
         ))}
       </div>
 
-      <h2 className="text-3xl text-[#7a1d2c] font-semibold mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Notable Alumni</h2>
+      <h2 className="text-3xl text-brand font-semibold mb-5" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Notable Alumni</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {[
           ["Mr. Anand R. Patil, Batch 2008", "Engineering Manager, leading SaaS company"],
@@ -36,8 +36,8 @@ const Alumni = () => (
           ["Mr. Vinod B. Bhat, Batch 2009", "Director, Construction Projects, GCC region"],
           ["Dr. Mahesh A. Patil, Batch 2007", "Associate Professor, IIT Dharwad"],
         ].map(([n, r]) => (
-          <div key={n} className="bg-white p-5 border-l-4 border-[#7a1d2c]">
-            <h3 className="text-[#7a1d2c] font-semibold">{n}</h3>
+          <div key={n} className="bg-white p-5 border-l-4 border-brand">
+            <h3 className="text-brand font-semibold">{n}</h3>
             <p className="text-sm italic text-[#3a3a3a]">{r}</p>
           </div>
         ))}
@@ -46,13 +46,13 @@ const Alumni = () => (
 
     <section className="bg-[#f1e6d2]/60 py-14 text-center">
       <div className="max-w-3xl mx-auto px-6 lg:px-10">
-        <h2 className="text-3xl md:text-4xl text-[#7a1d2c] font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Join the VDIT Alumni Network</h2>
+        <h2 className="text-3xl md:text-4xl text-brand font-semibold mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Join the VDIT Alumni Network</h2>
         <p className="text-[#2a2a2a]/85 leading-relaxed">
           Reconnect with your batch, mentor current students, attend annual
           alumni meets, and contribute to your alma mater. Registration is open
           for all VDIT graduates.
         </p>
-        <Link to="/admissions" className="inline-block mt-6 bg-[#7a1d2c] text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-[#5b1421] transition">
+        <Link to="/admissions" className="inline-block mt-6 bg-brand text-[#f7efe2] px-7 py-3 text-sm font-sans-ui font-semibold tracking-wider hover:bg-brand-dark transition">
           Register on Alumni Portal
         </Link>
       </div>
