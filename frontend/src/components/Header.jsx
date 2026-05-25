@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Search, Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import Logo from "./Logo";
@@ -191,6 +191,27 @@ const Header = () => {
   const [openMega, setOpenMega] = useState(null);
   const [openMobileMenu, setOpenMobileMenu] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
+  const closeTimer = useRef(null);
+
+  const openMenu = (label) => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    setOpenMega(label);
+  };
+
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => {
+      setOpenMega(null);
+      closeTimer.current = null;
+    }, 180);
+  };
+
+  useEffect(() => () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -254,8 +275,8 @@ const Header = () => {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => setOpenMega(item.label)}
-                onMouseLeave={() => setOpenMega(null)}
+                onMouseEnter={() => item.columns && openMenu(item.label)}
+                onMouseLeave={() => item.columns && scheduleClose()}
               >
                 <NavLink
                   to={item.to}
@@ -301,10 +322,12 @@ const Header = () => {
         {/* Mega menu panel (desktop) */}
         {openMega && (
           <div
-            onMouseEnter={() => setOpenMega(openMega)}
-            onMouseLeave={() => setOpenMega(null)}
-            className="hidden lg:block absolute left-0 right-0 top-full bg-surface border-t border-brand/15 shadow-xl mega-anim z-40"
+            onMouseEnter={() => openMenu(openMega)}
+            onMouseLeave={() => scheduleClose()}
+            className="hidden lg:block absolute left-0 right-0 top-full pt-2 z-40"
           >
+            {/* Invisible bridge to prevent dead-zone between trigger & panel */}
+            <div className="bg-surface border-t border-brand/15 shadow-xl mega-anim">
             {(() => {
               const item = mainNav.find((i) => i.label === openMega);
               if (!item || !item.columns) return null;
@@ -320,7 +343,10 @@ const Header = () => {
                           <li key={l.to}>
                             <Link
                               to={l.to}
-                              onClick={() => setOpenMega(null)}
+                              onClick={() => {
+                                if (closeTimer.current) clearTimeout(closeTimer.current);
+                                setOpenMega(null);
+                              }}
                               className="text-[13.5px] text-[#2a2a2a] hover:text-brand transition flex items-center gap-1.5"
                             >
                               <ChevronRight
@@ -337,6 +363,7 @@ const Header = () => {
                 </div>
               );
             })()}
+            </div>
           </div>
         )}
 
